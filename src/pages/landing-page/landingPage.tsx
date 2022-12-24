@@ -13,9 +13,11 @@ const HighlightText = ({ children }: HighlightTextProps) => <span className="tex
 const HorizontalLine: React.FC<{className: string}> = ({ className }) => <div className={`${className} border-t border-[#438EFF]`}/>
 
 const LandingPage = ({ className, isMobile }: LandingPageProps) => {
+  const flexItemAlignment = isMobile ? "items-start" : "items-end";
+
   return <div id="landing" className={`${className} bg-[#000000] text-[#FFFFFF] p-5 flex ${ isMobile ? "flex-col-reverse" : "flex-row" } gap-2 items-center justify-center`}>
-    <div className="flex flex-col items-end gap-4">
-      <div className="flex flex-col items-end w-fit">
+    <div className={`flex flex-col ${flexItemAlignment} gap-4`}>
+      <div className={`flex flex-col ${flexItemAlignment} w-fit`}>
         <p className="text-right text-[#595959] text-[40px] leading-[50px]">Hello there! I am</p>
 
         <div className="w-fit flex flex-col items-end gap-1">
@@ -25,7 +27,7 @@ const LandingPage = ({ className, isMobile }: LandingPageProps) => {
         </div>
       </div>
 
-      <p className="w-[60%] break-words text-right text-[#595959]">
+      <p className={`${ isMobile ? "w-full text-left" : "w-[60%] text-right" } text-[#595959]`}>
         I am currently a <HighlightText>Year 2</HighlightText> computer science student in <HighlightText>National University of Singapore</HighlightText>.
       </p>
     </div>
