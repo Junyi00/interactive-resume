@@ -5,11 +5,7 @@ interface LandingPageProps {
   isMobile: boolean;
 }
 
-interface HighlightTextProps {
-  children: React.ReactNode;
-}
-
-const HighlightText = ({ children }: HighlightTextProps) => <span className="text-[#438EFF]">{children}</span>;
+const HighlightText: React.FC<{children: React.ReactNode}> = ({ children }) => <span className="text-[#438EFF]">{children}</span>;
 const HorizontalLine: React.FC<{className: string}> = ({ className }) => <div className={`${className} border-t border-[#438EFF]`}/>
 
 const LandingPage = ({ className, isMobile }: LandingPageProps) => {
