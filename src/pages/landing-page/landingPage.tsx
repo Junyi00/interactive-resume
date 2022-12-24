@@ -15,7 +15,7 @@ const HorizontalLine: React.FC<{className: string}> = ({ className }) => <div cl
 const LandingPage = ({ className, isMobile }: LandingPageProps) => {
   const flexItemAlignment = isMobile ? "items-start" : "items-end";
 
-  return <div id="landing" className={`${className} bg-[#000000] text-[#FFFFFF] p-5 flex ${ isMobile ? "flex-col-reverse" : "flex-row" } gap-2 items-center justify-center`}>
+  return <div id="landing" className={`${className} bg-[#111111] text-[#FFFFFF] p-5 flex ${ isMobile ? "flex-col-reverse" : "flex-row" } gap-2 items-center justify-center`}>
     <div className={`flex flex-col ${flexItemAlignment} gap-4`}>
       <div className={`flex flex-col ${flexItemAlignment} w-fit`}>
         <p className="text-right text-[#595959] text-[40px] leading-[50px]">Hello there! I am</p>

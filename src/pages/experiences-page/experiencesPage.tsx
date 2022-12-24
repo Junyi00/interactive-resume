@@ -5,7 +5,7 @@ interface ExperiencesPageProps {
 
 
 const ExperiencesPage = ({ className, isMobile }: ExperiencesPageProps) => {
-  return <div id="experiences" className={`${className} bg-[#000000] text-[#FFFFFF]`}>
+  return <div id="experiences" className={`${className} bg-[#111111] text-[#FFFFFF]`}>
     Experiences
   </div>
 };

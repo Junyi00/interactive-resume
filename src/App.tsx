@@ -34,11 +34,17 @@ function App() {
   const ContentPageCSS = `relative ${ windowWidth > 600 ? "left-[5%] w-[85%]" : "left-0 w-full" } h-screen snap-start`;
 
   return (
-    <div className="h-screen w-full overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#000000]">
-      { !isMobile && 
+    <div className="h-screen w-full overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#111111]">
+      { !isMobile ?
         <div className="absolute left-0 w-[5%] h-screen flex flex-col gap-5 justify-start items-center">
           <VerticalLine />
           <QuickAccessIcons />
+        </div> :
+        <div className="absolute top-0 left-0 w-full h-[5%] flex flex-row justify-between items-center pt-4 px-5 z-10">
+          <a href="#landing" className="text-[#FFFFFF] text-[25px] tracking-wider">GJY</a>
+          <div className="flex flex-row gap-3">
+            <QuickAccessIcons />
+          </div>
         </div>
       }
 
@@ -49,6 +55,7 @@ function App() {
         <div className="absolute top-0 right-0 w-[10%] h-screen flex flex-col gap-2 justify-end items-end pr-10 text-[#FFFFFF]">
           <a href="#landing">Welcome</a>
           <a href="#experiences">Experiences</a>
+          <a href="#projects">Projects</a>
           <VerticalLine />
         </div> 
       }
