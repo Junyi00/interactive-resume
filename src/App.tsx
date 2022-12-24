@@ -24,11 +24,11 @@ function App() {
   useEffect(() => setIsMobile(windowWidth < MOBILE_WIDTH), [windowWidth]);
 
   const VerticalLine = () => <div className="h-[5%] w-0 border-l border-[#FFFFFF] gap-1"/>;
-  const QuickAccessIcons = () => <>
-    <ResumeIcon />
-    <GithubIcon />
-    <LinkedinIcon />
-    <EmailIcon />
+  const QuickAccessIcons: React.FC<{width: string}> = ({ width }) => <>
+    <ResumeIcon width={width}/>
+    <GithubIcon width={width}/>
+    <LinkedinIcon width={width}/>
+    <EmailIcon width={width}/>
   </>;
 
   const ContentPageCSS = `relative ${ windowWidth > 600 ? "left-[5%] w-[85%]" : "left-0 w-full" } h-screen snap-start`;
@@ -38,12 +38,12 @@ function App() {
       { !isMobile ?
         <div className="absolute left-0 w-[5%] h-screen flex flex-col gap-5 justify-start items-center">
           <VerticalLine />
-          <QuickAccessIcons />
+          <QuickAccessIcons width={ isMobile ? "20px" : "30px" }/>
         </div> :
         <div className="absolute top-0 left-0 w-full h-[5%] flex flex-row justify-between items-center pt-4 px-5 z-10">
-          <a href="#landing" className="text-[#FFFFFF] text-[25px] tracking-wider">GJY</a>
+          <a href="#landing" className="text-[#FFFFFF] text-[20px] tracking-wider">GJY</a>
           <div className="flex flex-row gap-3">
-            <QuickAccessIcons />
+            <QuickAccessIcons width={ isMobile ? "20px" : "30px" }/>
           </div>
         </div>
       }
