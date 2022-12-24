@@ -1,10 +1,10 @@
 interface ExperiencesPageProps {
   className: string;
-  windowWidth: number;
+  isMobile: boolean;
 }
 
 
-const ExperiencesPage = ({ className, windowWidth }: ExperiencesPageProps) => {
+const ExperiencesPage = ({ className, isMobile }: ExperiencesPageProps) => {
   return <div className={`${className} bg-[#000000] text-[#FFFFFF]`}>
     Experiences
   </div>

@@ -3,7 +3,9 @@ import LandingPage from './pages/landing-page/landingPage';
 import ExperiencesPage from './pages/experiences-page/experiencesPage';
 
 function App() {
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const MOBILE_WIDTH = 600;
 
   const updateDimensions = () => { setWindowWidth(window.innerWidth) }
 
@@ -13,6 +15,8 @@ function App() {
 
     return () => window.removeEventListener("resize", updateDimensions);
   }, [])
+
+  useEffect(() => setIsMobile(windowWidth < MOBILE_WIDTH), [windowWidth]);
 
   const VerticalLine = () => <div className="h-[5%] w-0 border-l border-[#FFFFFF] gap-1"/>;
 
@@ -26,8 +30,8 @@ function App() {
         </div>
       }
 
-      <LandingPage className={ContentPageCSS} windowWidth={windowWidth}/>
-      <ExperiencesPage className={ContentPageCSS} windowWidth={windowWidth}/>
+      <LandingPage className={ContentPageCSS} isMobile={isMobile}/>
+      <ExperiencesPage className={ContentPageCSS} isMobile={isMobile}/>
       
       { windowWidth > 600 && 
         <div className="absolute top-0 right-0 w-[10%] h-screen flex flex-col gap-1 justify-end items-center">
