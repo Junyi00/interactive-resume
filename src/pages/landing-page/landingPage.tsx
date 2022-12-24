@@ -1,9 +1,10 @@
 interface LandingPageProps {
   className: string;
+  windowWidth: number;
 }
 
-const LandingPage = ({ className }: LandingPageProps) => {
-  return <div className={`${className} text-[#FFFFFF]`}>
+const LandingPage = ({ className, windowWidth }: LandingPageProps) => {
+  return <div className={`${className} bg-[#000000] text-[#FFFFFF] p-5`}>
     Landing
   </div>;
 };

@@ -1,10 +1,11 @@
 interface ExperiencesPageProps {
   className: string;
+  windowWidth: number;
 }
 
 
-const ExperiencesPage = ({ className }: ExperiencesPageProps) => {
-  return <div className={`${className} text-[#FFFFFF]`}>
+const ExperiencesPage = ({ className, windowWidth }: ExperiencesPageProps) => {
+  return <div className={`${className} bg-[#000000] text-[#FFFFFF]`}>
     Experiences
   </div>
 };
