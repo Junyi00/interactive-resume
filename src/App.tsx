@@ -1,24 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import LandingPage from './pages/landing-page/landingPage';
+import ExperiencesPage from './pages/experiences-page/experiencesPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen w-full overflow-auto snap-y snap-mandatory">
+      <LandingPage className="snap-start h-screen w-full"/>
+      <ExperiencesPage className="snap-start h-screen w-full"/>
     </div>
   );
 }
