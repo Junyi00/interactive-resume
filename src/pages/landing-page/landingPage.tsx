@@ -3,7 +3,7 @@ interface LandingPageProps {
 }
 
 const LandingPage = ({ className }: LandingPageProps) => {
-  return <div className={ className }>
+  return <div className={`${className} text-[#FFFFFF]`}>
     Landing
   </div>;
 };

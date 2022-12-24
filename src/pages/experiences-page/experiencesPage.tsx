@@ -4,7 +4,7 @@ interface ExperiencesPageProps {
 
 
 const ExperiencesPage = ({ className }: ExperiencesPageProps) => {
-  return <div className={className}>
+  return <div className={`${className} text-[#FFFFFF]`}>
     Experiences
   </div>
 };
