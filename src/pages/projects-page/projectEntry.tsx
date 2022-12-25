@@ -1,14 +1,14 @@
 import RecyclopsImage from "../../assets/projects/recyclops/Recyclops.png";
 
 interface ProjectEntryProps {
-  id: string;
+  id?: string;
   name: string;
   date: string;
   description: string[];
 }
 
 const ProjectEntry = ({ id, name, date, description }: ProjectEntryProps) => {
-  return <div id={id} className="w-auto max-w-[90%] min-h-[500px] max-h-[700px] flex-auto 
+  return <div id={id} className="w-auto max-w-[100%] min-h-[500px] max-h-[700px] flex-auto 
     flex flex-col gap-2 bg-[#222222] rounded-lg drop-shadow shadow-white">
       
     <div className="w-full h-fit p-2 flex items-center justify-center bg-[#D9D9D9] rounded-t-lg">
@@ -25,7 +25,6 @@ const ProjectEntry = ({ id, name, date, description }: ProjectEntryProps) => {
         description.map((desc, index) => <p key={index} className="text-[15px]">{desc}</p>)
       }
     </div>
-
   </div>;
 };
 

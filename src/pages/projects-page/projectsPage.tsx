@@ -43,17 +43,27 @@ const PROJECTS = [
 ]
 
 const ProjectsPage = ({ className, isMobile, onHover }: ProjectsPageProps) => {
+  const itemsAlignmentCSS = !isMobile ? "justify-center items-center" : "justify-start items-start"
+
   return <div 
     id="projects" 
-    className={`${className} bg-[#111111] text-[#FFFFFF] h-screen w-full flex flex-col gap-5 justify-center items-center px-5 pt-2`} 
+    className={`${className} bg-[#111111] text-[#FFFFFF] w-full h-screen
+                flex flex-col gap-2 ${itemsAlignmentCSS} px-5 pt-10`} 
     onMouseEnter={onHover}
   >
     <p className="text-[30px] font-bold tracking-wider">PROJECTS</p>
-    <Carousell width="100%">
-    {
-      PROJECTS.map((project, index) => <ProjectEntry id={`carousell_${index}`} key={index} {...project} />)
+    { !isMobile ?
+      <Carousell width="100%">
+        {
+          PROJECTS.map((project, index) => <ProjectEntry id={`carousell_${index}`} key={index} {...project} />)
+        }
+      </Carousell> :
+      <div className="flex flex-col h-[80%] gap-5 overflow-y-auto scrollable">
+        {
+          PROJECTS.map((project, index) => <ProjectEntry key={index} {...project} />)
+        }
+      </div>
     }
-    </Carousell>
   </div> 
 };
 
