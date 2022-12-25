@@ -5,6 +5,7 @@ import "./experiencePage.css";
 interface ExperiencesPageProps {
   className: string;
   isMobile: boolean;
+  onHover: () => void;
 }
 
 const EXPERIENCES = [
@@ -92,10 +93,15 @@ const EXPERIENCES = [
   },
 ]
 
-const ExperiencesPage = ({ className, isMobile }: ExperiencesPageProps) => {
+const ExperiencesPage = ({ className, isMobile, onHover }: ExperiencesPageProps) => {
   return (
-  <div id="experiences" className={`${className} bg-[#111111] text-[#FFFFFF] h-screen w-full`}>
-    <div className={`relative w-[95%] h-[80%] top-[10%] py-10 px-5
+  <div 
+    id="experiences" 
+    className={`${className} bg-[#111111] text-[#FFFFFF] h-screen w-full flex flex-col gap-2 justify-center items-start px-5 pt-2`}
+    onMouseEnter={onHover}
+  >
+    <p className="text-[30px] font-bold tracking-wider">EXPERIENCES</p>
+    <div className={`w-[95%] h-[80%] py-10
       flex flex-col gap-3 justify-start items-start 
       overflow-y-scroll scrollable`
     }>
