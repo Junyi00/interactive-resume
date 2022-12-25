@@ -38,7 +38,7 @@ function App() {
 
   const PageNavigationButton: React.FC<{text: string, page: number, href: string}> = ({ text, page, href }) => <a 
     href={href}
-    className={`${currentPage == page ? "text-[#438EFF]" : "hover:text-[#FFFFFF]"}`}
+    className={`${currentPage === page ? "text-[#438EFF]" : "hover:text-[#FFFFFF]"}`}
     onClick={() => setCurrentPage(page)}
   >
     {text}
@@ -49,7 +49,7 @@ function App() {
   };
 
   return (
-    <div className={`h-screen w-full flex ${ !isMobile ? "flex-row" : "flex-col" }  overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#111111]`}>
+    <div className={`h-screen w-full flex ${ !isMobile ? "flex-row" : "flex-col" } overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#111111]`}>
       { !isMobile ?
         <div className="sticky top-0 h-scree w-fit flex flex-col gap-5 justify-start items-center pl-5">
           <VerticalLine />
