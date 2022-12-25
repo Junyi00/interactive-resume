@@ -1,5 +1,7 @@
 import ExperienceEntry from "./ExperienceEntry";
 
+import "./experiencePage.css";
+
 interface ExperiencesPageProps {
   className: string;
   isMobile: boolean;
@@ -93,9 +95,9 @@ const EXPERIENCES = [
 const ExperiencesPage = ({ className, isMobile }: ExperiencesPageProps) => {
   return (
     <div id="experiences" className={`${className} bg-[#111111] text-[#FFFFFF] h-screen w-full`}>
-    <div className={`relative w-full h-[80%] top-[10%]
-      flex flex-col gap-3 justify-start items-start overflow-y-scroll
-      py-10 px-5`
+    <div className={`relative w-[80%] h-[80%] top-[10%] py-10 px-5
+      flex flex-col gap-3 justify-start items-start 
+      overflow-y-scroll scrollable`
     }>
       {
         EXPERIENCES.map((experience, index) => <ExperienceEntry key={index} isMobile={isMobile} {...experience} />)
