@@ -8,8 +8,8 @@ interface ProjectEntryProps {
 }
 
 const ProjectEntry = ({ id, name, date, description }: ProjectEntryProps) => {
-  return <div id={id} className="w-auto max-w-[100%] min-h-[500px] max-h-[700px] flex-auto 
-    flex flex-col gap-2 bg-[#222222] rounded-lg drop-shadow shadow-white">
+  return <div id={id} className="w-auto max-w-[99%] min-h-[500px] max-h-[700px] rounded-t-lg flex-auto 
+    flex flex-col gap-2 bg-[#222222] shadow shadow-gray-300">
       
     <div className="w-full h-fit p-2 flex items-center justify-center bg-[#D9D9D9] rounded-t-lg">
       <img alt={name + "_image"} src={RecyclopsImage} width="80%"/>
