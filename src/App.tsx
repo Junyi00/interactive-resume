@@ -10,7 +10,7 @@ import {ReactComponent as EmailIcon} from './assets/email_icon.svg';
 function App() {
   const [windowWidth, setWindowWidth] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  const MOBILE_WIDTH = 600;
+  const MOBILE_WIDTH = 850;
 
   const updateDimensions = () => { setWindowWidth(window.innerWidth) }
 
@@ -31,7 +31,7 @@ function App() {
     <EmailIcon width={width}/>
   </>;
 
-  const ContentPageCSS = `relative ${ windowWidth > 600 ? "left-[5%] w-[85%]" : "left-0 w-full" } h-screen snap-start`;
+  const ContentPageCSS = `relative ${ !isMobile ? "left-[5%] w-[85%]" : "left-0 w-full" } h-screen snap-start`;
 
   return (
     <div className="h-screen w-full overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#111111]">

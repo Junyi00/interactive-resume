@@ -28,7 +28,7 @@ const LandingPage = ({ className, isMobile }: LandingPageProps) => {
       </p>
     </div>
 
-    <img src={BackgroundImg} width={isMobile ? "100%" : "40%"}/>
+    <img className={ isMobile ? "absolute opacity-10" : "" } src={BackgroundImg} width={isMobile ? "100%" : "40%"}/>
   </div>;
 };
 
