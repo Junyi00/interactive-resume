@@ -33,29 +33,31 @@ function App() {
     <QuickAccessButton Icon={EmailIcon} width={width}/>
   </>;
 
-  const ContentPageCSS = `relative ${ !isMobile ? "left-[5%] w-[85%]" : "left-0 w-full" } h-screen snap-start`;
+  const ContentPageCSS = `relative ${ !isMobile ? "w-full" : "left-0 w-full" } h-screen snap-start`;
 
   return (
-    <div className="h-screen w-full overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#111111]">
+    <div className={`h-screen w-full flex ${ !isMobile ? "flex-row" : "flex-col" }  overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#111111]`}>
       { !isMobile ?
-        <div className="absolute left-0 w-[5%] h-screen flex flex-col gap-5 justify-start items-center">
+        <div className="sticky top-0 h-scree w-fit flex flex-col gap-5 justify-start items-center pl-5">
           <VerticalLine />
           <QuickAccessIcons width={ isMobile ? "20px" : "30px" }/>
         </div> :
-        <div className="absolute top-0 left-0 w-full h-[5%] flex flex-row justify-between items-center pt-4 px-5 z-10">
-          <a href="#landing" className="text-[#FFFFFF] text-[20px] tracking-wider">GJY</a>
+        <div className="sticky top-0 w-full h-fit flex flex-row justify-between items-center pt-2 px-5 z-10">
+          <a href="#landing" className="text-[#FFFFFF] text-[20px] nking-wider">GJY</a>
           <div className="flex flex-row gap-3">
             <QuickAccessIcons width={ isMobile ? "20px" : "30px" }/>
           </div>
         </div>
       }
 
-      <LandingPage className={ContentPageCSS} isMobile={isMobile}/>
-      <ExperiencesPage className={ContentPageCSS} isMobile={isMobile}/>
-      <ProjectsPage className={ContentPageCSS} isMobile={isMobile}/>
+      <div className="h-screen w-auto flex-grow">
+        <LandingPage className={ContentPageCSS} isMobile={isMobile}/>
+        <ExperiencesPage className={ContentPageCSS} isMobile={isMobile}/>
+        <ProjectsPage className={ContentPageCSS} isMobile={isMobile}/>
+      </div>
       
       { !isMobile &&
-        <div className="absolute top-0 right-0 w-[10%] h-screen flex flex-col gap-2 justify-end items-end pr-10 text-[#FFFFFF]">
+        <div className="sticky top-0 h-screen w-fit flex flex-col gap-2 justify-end items-end pr-5 text-[#FFFFFF]">
           <a href="#landing">Welcome</a>
           <a href="#experiences">Experiences</a>
           <a href="#projects">Projects</a>
