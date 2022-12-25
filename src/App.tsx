@@ -55,7 +55,7 @@ function App() {
           <VerticalLine />
           <QuickAccessIcons width={ isMobile ? "20px" : "30px" }/>
         </div> :
-        <div className="sticky top-0 w-full h-fit flex flex-row justify-between items-center pt-2 px-5 z-10">
+        <div className="fixed left-0 top-0 w-full h-fit flex flex-row justify-between items-center pt-2 px-5 z-10">
           <a href="#landing" className="text-[#FFFFFF] text-[20px] tracking-wider">GJY</a>
           <div className="flex flex-row gap-3">
             <QuickAccessIcons width={ isMobile ? "20px" : "30px" }/>
