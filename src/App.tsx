@@ -64,10 +64,7 @@ function App() {
     const nextPage: number = left ? currentPage - 1 : currentPage + 1;
     const targetRef = document.getElementById(PAGE_IDS[nextPage]);
 
-    console.log(nextPage);
-
     if (targetRef === null) {
-      console.log(PAGE_IDS[nextPage]);
       return;
     }
 
@@ -80,15 +77,15 @@ function App() {
                     ${ !isMobile ? "grid grid-rows-1 grid-cols-[auto_auto_auto]" : "flex flex-col" } 
                     overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#111111]`}>
       { !isMobile ?
-        <div className={`${ !isMobile ? "col-start-1 sticky top-0 h-screen w-fit" : "h-fit w-full" }
-                        flex flex-col gap-5 justify-start items-center pl-5`}>
+        <div className="col-start-1 sticky top-0 h-screen w-fit
+                        flex flex-col gap-5 justify-start items-center pl-5">
           <VerticalLine />
-          <QuickAccessIcons width={ isMobile ? "20px" : "30px" }/>
+          <QuickAccessIcons width="30px"/>
         </div> :
         <div className="fixed left-0 top-0 w-full h-fit flex flex-row justify-between items-center pt-2 px-5 z-10">
           <a href="#landing" className="text-[#FFFFFF] text-[20px] tracking-wider">GJY</a>
           <div className="flex flex-row gap-3">
-            <QuickAccessIcons width={ isMobile ? "20px" : "30px" }/>
+            <QuickAccessIcons width="20px"/>
           </div>
         </div>
       }
