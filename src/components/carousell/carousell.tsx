@@ -1,8 +1,8 @@
 import { useState, Children } from "react";
 import "./carousell.css";
 
-import {ReactComponent as NavigationLeft} from "../../assets/navigation/navigation_left.svg";
-import {ReactComponent as NavigationRight} from "../../assets/navigation/navigation_right.svg";
+import {ReactComponent as NavigationLeft} from "assets/navigation/navigation_left.svg";
+import {ReactComponent as NavigationRight} from "assets/navigation/navigation_right.svg";
 
 interface CarousellProps {
   children?: React.ReactNode;
@@ -27,15 +27,15 @@ const Carousell = ({ children, width }: CarousellProps) => {
   }
 
   return <div className={`relative h-fit w-[${width}] flex justify-center items-center`}>
-    <div className="carousell w-[90%]">
+    <div className="carousell w-[90%] h-fit py-2">
       {children}
     </div>
     <NavigationLeft 
-      className="absolute left-0 translate-x-full top-[50%] -translate-y-1/2 text-[#FFFFFF] z-10 opacity-50 hover:opacity-90 transition-opacity"
+      className="absolute left-0 translate-x-full top-[50%] -translate-y-1/2 text-[#FFFFFF] z-10 opacity-30 hover:opacity-90 transition-opacity"
       onClick={onNavClick(true)}
     />
     <NavigationRight 
-      className="absolute right-0 -translate-x-full top-[50%] -translate-y-1/2 text-[#FFFFFF] z-10 opacity-50 hover:opacity-90 transition-opacity"
+      className="absolute right-0 -translate-x-full top-[50%] -translate-y-1/2 text-[#FFFFFF] z-10 opacity-30 hover:opacity-90 transition-opacity"
       onClick={onNavClick(false)}
     />
     {
