@@ -101,7 +101,7 @@ const ExperiencesPage = ({ className, isMobile, onHover }: ExperiencesPageProps)
     onMouseEnter={onHover}
   >
     <p className="text-[30px] font-bold tracking-wider">EXPERIENCES</p>
-    <div className={`w-[95%] h-[80%] py-10
+    <div className={`w-[95%] h-[85%] py-10
       flex flex-col gap-3 justify-start items-start 
       overflow-y-scroll scrollable`
     }>
