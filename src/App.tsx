@@ -7,7 +7,15 @@ import {ReactComponent as ResumeIcon} from './assets/resume_icon.svg';
 import {ReactComponent as GithubIcon} from './assets/github_icon.svg';
 import {ReactComponent as LinkedinIcon} from './assets/linkedin_icon.svg';
 import {ReactComponent as EmailIcon} from './assets/email_icon.svg';
+import {ReactComponent as NavigationLeft} from "assets/navigation/navigation_left.svg";
+import {ReactComponent as NavigationRight} from "assets/navigation/navigation_right.svg";
 import QuickAccessButton from './components/quick-access-button/quickAccessButton';
+
+const PAGE_IDS: { [key: number]: string } = {
+  0: "landing",
+  1: "experiences",
+  2: "projects",
+}
 
 function App() {
   const [windowWidth, setWindowWidth] = useState<number>(0);
@@ -48,6 +56,25 @@ function App() {
     setCurrentPage(pageNum);
   };
 
+  const onMobileNavigation = (left: boolean) => () => {
+    if ((left && currentPage === 0) || (!left && currentPage === Object.keys(PAGE_IDS).length - 1)) {
+      return;
+    }
+
+    const nextPage: number = left ? currentPage - 1 : currentPage + 1;
+    const targetRef = document.getElementById(PAGE_IDS[nextPage]);
+
+    console.log(nextPage);
+
+    if (targetRef === null) {
+      console.log(PAGE_IDS[nextPage]);
+      return;
+    }
+
+    targetRef.scrollIntoView({ behavior: "smooth", block: "start" });
+    setCurrentPage(nextPage);
+  }
+
   return (
     <div className={`h-screen w-screen max-w-screen
                     ${ !isMobile ? "grid grid-rows-1 grid-cols-[auto_auto_auto]" : "flex flex-col" } 
@@ -74,11 +101,24 @@ function App() {
       
       { !isMobile &&
         <div className="col-start-3 sticky top-0 h-screen w-fit flex flex-col gap-2 justify-end items-end pr-5 text-[#595959]">
-          <PageNavigationButton href="#landing" page={0} text="Welcome"/>
-          <PageNavigationButton href="#experiences" page={1} text="Experiences"/>
-          <PageNavigationButton href="#projects" page={2} text="Projects"/>
+          <PageNavigationButton href={PAGE_IDS[0]} page={0} text="Welcome"/>
+          <PageNavigationButton href={PAGE_IDS[1]} page={1} text="Experiences"/>
+          <PageNavigationButton href={PAGE_IDS[2]} page={2} text="Projects"/>
           <VerticalLine />
         </div> 
+      }
+
+      { isMobile && 
+        <div className="absolute bottom-0 right-0 w-fit h-fit p-2 flex flex-row justify-end b">
+          <NavigationLeft 
+            className="z-10 opacity-30 hover:opacity-90 transition-opacity"
+            onClick={onMobileNavigation(true)}
+          />
+          <NavigationRight
+            className="z-10 opacity-30 hover:opacity-90 transition-opacity"
+            onClick={onMobileNavigation(false)}
+          />
+        </div>
       }
     </div>
   );
