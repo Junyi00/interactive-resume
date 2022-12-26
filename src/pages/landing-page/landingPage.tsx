@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import BackgroundImg from '../../assets/background_img.png';
+import BackgroundImg from 'assets/background_img.png';
 
 interface LandingPageProps {
   className: string;
