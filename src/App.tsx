@@ -49,9 +49,12 @@ function App() {
   };
 
   return (
-    <div className={`h-screen w-full flex ${ !isMobile ? "flex-row" : "flex-col" } overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#111111]`}>
+    <div className={`h-screen w-screen max-w-screen
+                    ${ !isMobile ? "grid grid-rows-1 grid-cols-[auto_auto_auto]" : "flex flex-col" } 
+                    overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#111111]`}>
       { !isMobile ?
-        <div className="sticky top-0 h-scree w-fit flex flex-col gap-5 justify-start items-center pl-5">
+        <div className={`${ !isMobile ? "col-start-1 sticky top-0 h-screen w-fit" : "h-fit w-full" }
+                        flex flex-col gap-5 justify-start items-center pl-5`}>
           <VerticalLine />
           <QuickAccessIcons width={ isMobile ? "20px" : "30px" }/>
         </div> :
@@ -63,14 +66,14 @@ function App() {
         </div>
       }
 
-      <div className="h-screen w-auto flex-grow">
+      <div className={`${ !isMobile ? "col-start-2 min-w-0 min-h-0 h-screen w-auto" : "flex-grow w-full" } `}>
         <LandingPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(0)}/>
         <ExperiencesPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(1)}/>
         <ProjectsPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(2)}/>
       </div>
       
       { !isMobile &&
-        <div className="sticky top-0 h-screen w-fit flex flex-col gap-2 justify-end items-end pr-5 text-[#595959]">
+        <div className="col-start-3 sticky top-0 h-screen w-fit flex flex-col gap-2 justify-end items-end pr-5 text-[#595959]">
           <PageNavigationButton href="#landing" page={0} text="Welcome"/>
           <PageNavigationButton href="#experiences" page={1} text="Experiences"/>
           <PageNavigationButton href="#projects" page={2} text="Projects"/>
@@ -79,7 +82,6 @@ function App() {
       }
     </div>
   );
-
     
 }
 
