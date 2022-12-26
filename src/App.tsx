@@ -3,10 +3,10 @@ import LandingPage from 'pages/landing-page/landingPage';
 import ExperiencesPage from 'pages/experiences-page/experiencesPage';
 import ProjectsPage from 'pages/projects-page/projectsPage';
 
-import {ReactComponent as ResumeIcon} from 'assets/resume_icon.svg';
-import {ReactComponent as GithubIcon} from 'assets/github_icon.svg';
-import {ReactComponent as LinkedinIcon} from 'assets/linkedin_icon.svg';
-import {ReactComponent as EmailIcon} from 'assets/email_icon.svg';
+import {ReactComponent as ResumeIcon} from 'assets/icons/resume_btn.svg';
+import {ReactComponent as GithubIcon} from 'assets/icons/github_btn.svg';
+import {ReactComponent as LinkedinIcon} from 'assets/icons/linkedin_btn.svg';
+import {ReactComponent as EmailIcon} from 'assets/icons/email_btn.svg';
 import {ReactComponent as NavigationLeft} from "assets/navigation/navigation_left.svg";
 import {ReactComponent as NavigationRight} from "assets/navigation/navigation_right.svg";
 import QuickAccessButton from 'components/quick-access-button/quickAccessButton';
