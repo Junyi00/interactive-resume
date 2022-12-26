@@ -1,4 +1,4 @@
-import ExperienceEntry from "./ExperienceEntry";
+import ExperienceEntry from "./experienceEntry";
 
 import "./experiencePage.css";
 
