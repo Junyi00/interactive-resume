@@ -53,9 +53,9 @@ const ProjectsPage = ({ className, isMobile, onHover }: ProjectsPageProps) => {
   >
     <p className="text-[30px] font-bold tracking-wider">PROJECTS</p>
     { !isMobile ?
-      <Carousell width="90%">
+      <Carousell prefix="project" width="90%">
         {
-          PROJECTS.map((project, index) => <ProjectEntry id={`carousell_${index}`} key={index} isMobile={isMobile} {...project} />)
+          PROJECTS.map((project, index) => <ProjectEntry id={`project_${index}`} key={index} isMobile={isMobile} {...project} />)
         }
       </Carousell> :
       <div className="flex flex-col h-[85%] w-full gap-5 p-1 overflow-y-auto scrollable scroll-smooth snap-y snap-mandatory [&>*]:snap-start">

@@ -6,10 +6,11 @@ import {ReactComponent as NavigationRight} from "assets/navigation/navigation_ri
 
 interface CarousellProps {
   children?: React.ReactNode;
+  prefix?: string; 
   width: string;
 }
 
-const Carousell = ({ children, width }: CarousellProps) => {
+const Carousell = ({ children, prefix, width }: CarousellProps) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   const onNavClick = (left: boolean) => () => {
@@ -39,7 +40,7 @@ const Carousell = ({ children, width }: CarousellProps) => {
       onClick={onNavClick(false)}
     />
     {
-      Children.map(children, (child, index) => <a key={index} id={`a_carousell_${index}`} href={`#carousell_${index}`} className="hidden">hidden</a>)
+      Children.map(children, (child, index) => <a key={index} id={`a_carousell_${index}`} href={`#${prefix}_${index}`} className="hidden">hidden</a>)
     }
   </div>
 };
