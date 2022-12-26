@@ -32,63 +32,45 @@ const EXPERIENCES = [
     ]
   },
   {
-    title: "Computing for Volunteer Organisations",
-    period: "May 2022 - July 2022",
+    title: "Paper Marchel",
+    period: "Jan 2021 - Aug 2021",
     location: "Singapore",
-    role: "Full Stack Engineer",
+    role: "Software Engineer",
     description: [
-      "Led a team of 3 on the implementation of 2 factor authentication (SingPass, Email) to enhance access control for 2 organisations", 
-      "Deployed staging environments with Capistrano, Nginx and GitLab’s CI/CD",
-      "Spearheaded the upgrade of Ruby on Rails backend from 5.2.0 to 6.1.6, removing unsupported gems and upgrading dependencies",
-      "Maintained relational databases on PostgreSQL and backend APIs for a decade old Ruby on Rails application",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare sodales orci, ut pulvinar quam iaculis at.", 
+      "Nunc sollicitudin massa et enim pellentesque, nec aliquet nibh volutpat. Sed sodales tortor ut pulvinar hendrerit. ",
+      "Vestibulum auctor erat ac accumsan gravida.",
     ]
   },
   {
-    title: "Computing for Volunteer Organisations",
-    period: "May 2022 - July 2022",
+    title: "One Cycle Pte. Ltd.",
+    period: "Jan 2020 - Mar 2020",
     location: "Singapore",
-    role: "Full Stack Engineer",
+    role: "Software Developer",
     description: [
-      "Led a team of 3 on the implementation of 2 factor authentication (SingPass, Email) to enhance access control for 2 organisations", 
-      "Deployed staging environments with Capistrano, Nginx and GitLab’s CI/CD",
-      "Spearheaded the upgrade of Ruby on Rails backend from 5.2.0 to 6.1.6, removing unsupported gems and upgrading dependencies",
-      "Maintained relational databases on PostgreSQL and backend APIs for a decade old Ruby on Rails application",
+      "Aenean lacinia ex molestie dolor convallis rutrum. Pellentesque ultricies molestie dapibus. Ut at mattis elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 
+      "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas laoreet elit non auctor semper. Donec nunc neque, luctus et sem ut, accumsan ornare ligula.",
     ]
   },
   {
-    title: "Computing for Volunteer Organisations",
-    period: "May 2022 - July 2022",
+    title: "Bravoda Loresa",
+    period: "May 2019",
     location: "Singapore",
-    role: "Full Stack Engineer",
+    role: "Software Developer",
     description: [
-      "Led a team of 3 on the implementation of 2 factor authentication (SingPass, Email) to enhance access control for 2 organisations", 
-      "Deployed staging environments with Capistrano, Nginx and GitLab’s CI/CD",
-      "Spearheaded the upgrade of Ruby on Rails backend from 5.2.0 to 6.1.6, removing unsupported gems and upgrading dependencies",
-      "Maintained relational databases on PostgreSQL and backend APIs for a decade old Ruby on Rails application",
+      "Proin ac sapien eget ex aliquam porttitor vitae non ipsum.", 
+      "Aenean ornare sodales orci, ut pulvinar quam iaculis at.",
+      "Phasellus vulputate velit fermentum fermentum ornare.",
     ]
   },
   {
-    title: "Computing for Volunteer Organisations",
-    period: "May 2022 - July 2022",
+    title: "Potato Life",
+    period: "Jan 2019 - Feb 2019",
     location: "Singapore",
-    role: "Full Stack Engineer",
+    role: "Developer",
     description: [
-      "Led a team of 3 on the implementation of 2 factor authentication (SingPass, Email) to enhance access control for 2 organisations", 
-      "Deployed staging environments with Capistrano, Nginx and GitLab’s CI/CD",
-      "Spearheaded the upgrade of Ruby on Rails backend from 5.2.0 to 6.1.6, removing unsupported gems and upgrading dependencies",
-      "Maintained relational databases on PostgreSQL and backend APIs for a decade old Ruby on Rails application",
-    ]
-  },
-  {
-    title: "Computing for Volunteer Organisations",
-    period: "May 2022 - July 2022",
-    location: "Singapore",
-    role: "Full Stack Engineer",
-    description: [
-      "Led a team of 3 on the implementation of 2 factor authentication (SingPass, Email) to enhance access control for 2 organisations", 
-      "Deployed staging environments with Capistrano, Nginx and GitLab’s CI/CD",
-      "Spearheaded the upgrade of Ruby on Rails backend from 5.2.0 to 6.1.6, removing unsupported gems and upgrading dependencies",
-      "Maintained relational databases on PostgreSQL and backend APIs for a decade old Ruby on Rails application",
+      "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.", 
+      "Donec nunc neque, luctus et sem ut, accumsan ornare ligula.",
     ]
   },
 ]

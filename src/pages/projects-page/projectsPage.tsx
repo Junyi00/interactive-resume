@@ -33,19 +33,11 @@ const PROJECTS = [
     ],
   },
   {
-    name: "Recyclops",
-    date: "July 2022",
+    name: "Paper Towel",
+    date: "May 2021",
     description: [
-      "Ut efficitur finibus elementum. Pellentesque mattis finibus nisl, et finibus ex consequat vitae. Donec nec faucibus velit. Morbi non cursus nibh. Nam ac dapibus diam. Morbi auctor, lacus et dapibus iaculis, augue leo varius sapien, eu mollis nulla arcu et nisl. Fusce rhoncus pretium sem eget consectetur.",
-      "Aenean lacinia ex molestie dolor convallis rutrum. Pellentesque ultricies molestie dapibus. Ut at mattis elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas laoreet elit non auctor semper. Donec nunc neque, luctus et sem ut, accumsan ornare ligula."
-    ],
-  },
-  {
-    name: "Recyclops",
-    date: "July 2022",
-    description: [
-      "A Progressive Web App that aims to simplify recycling for Singaporeans.",
-      "Empowered by machine learning, the user can scan any household object. Recyclops will inform them if it is safe to recycle, how to recycle it and whether any special instructions are needed. It also serves as an information dashboard of articles so users can access them easily to learn more."
+      "Morbi ac est a eros euismod feugiat. Pellentesque cursus fermentum nunc, vitae vulputate urna congue sit amet. Nullam rutrum tempus arcu sit amet ornare. Quisque euismod porttitor odio, in consectetur sem pretium fermentum. Suspendisse potenti. Etiam eleifend vitae eros sed lobortis.",
+      "Sed faucibus tortor quis lacus aliquet ultrices ut pellentesque lectus. Sed elementum ante tempus ipsum convallis, nec euismod eros mollis. Vivamus ultrices aliquam justo, id vestibulum nulla fringilla sed. Nullam tortor quam, commodo vel congue sit amet, mollis et sem."
     ],
   },
 ]
