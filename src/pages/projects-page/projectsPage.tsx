@@ -56,7 +56,7 @@ const ProjectsPage = ({ className, isMobile, onHover }: ProjectsPageProps) => {
   return <div 
     id="projects" 
     className={`${className} bg-[#111111] text-[#FFFFFF] w-full h-screen
-                flex flex-col gap-2 ${itemsAlignmentCSS} px-5 pt-10`} 
+                flex flex-col gap-2 ${itemsAlignmentCSS} px-5 pt-2`} 
     onMouseEnter={onHover}
   >
     <p className="text-[30px] font-bold tracking-wider">PROJECTS</p>
