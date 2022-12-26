@@ -53,7 +53,7 @@ const ProjectsPage = ({ className, isMobile, onHover }: ProjectsPageProps) => {
   >
     <p className="text-[30px] font-bold tracking-wider">PROJECTS</p>
     { !isMobile ?
-      <Carousell width="100%">
+      <Carousell width="90%">
         {
           PROJECTS.map((project, index) => <ProjectEntry id={`carousell_${index}`} key={index} isMobile={isMobile} {...project} />)
         }

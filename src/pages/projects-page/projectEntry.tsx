@@ -37,8 +37,8 @@ const ProjectEntry = ({ id, name, date, description, isMobile, techStack, links 
         description.map((desc, index) => <p key={index} className="text-[15px]">{desc}</p>)
       }
 
-      <div className="inline flex-row gap-14">
-        {techStack !== undefined && <div>
+      <div className={`${ !isMobile ? "flex gap-14" : "inline" }`}>
+        {techStack !== undefined && <div className="w-min">
           <p className="text-[#595959] font-bold">Tech</p>
           <div className="h-min w-min flex flex-row gap-1 ">
             {
@@ -47,7 +47,7 @@ const ProjectEntry = ({ id, name, date, description, isMobile, techStack, links 
           </div>
         </div>
         }
-        {links !== undefined && <div>
+        {links !== undefined && <div className="w-min">
           <p className="text-[#595959] font-bold">Links</p>
           <div className="h-min w-min flex flex-row gap-1 ">
             {
