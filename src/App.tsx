@@ -101,9 +101,9 @@ function App() {
       
       { !isMobile &&
         <div className="col-start-3 sticky top-0 h-screen w-fit flex flex-col gap-2 justify-end items-end pr-5 text-[#595959]">
-          <PageNavigationButton href={PAGE_IDS[0]} page={0} text="Welcome"/>
-          <PageNavigationButton href={PAGE_IDS[1]} page={1} text="Experiences"/>
-          <PageNavigationButton href={PAGE_IDS[2]} page={2} text="Projects"/>
+          <PageNavigationButton href={`#${PAGE_IDS[0]}`} page={0} text="Welcome"/>
+          <PageNavigationButton href={`#${PAGE_IDS[1]}`} page={1} text="Experiences"/>
+          <PageNavigationButton href={`#${PAGE_IDS[2]}`} page={2} text="Projects"/>
           <VerticalLine />
         </div> 
       }
