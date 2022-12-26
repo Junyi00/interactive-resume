@@ -36,10 +36,10 @@ function App() {
 
   const VerticalLine = () => <div className="h-[5%] w-0 border-l border-[#FFFFFF] gap-1"/>;
   const QuickAccessIcons: React.FC<{width: string}> = ({ width }) => <>
-    <QuickAccessButton Icon={ResumeIcon} width={width}/>
-    <QuickAccessButton Icon={GithubIcon} width={width}/>
-    <QuickAccessButton Icon={LinkedinIcon} width={width}/>
-    <QuickAccessButton Icon={EmailIcon} width={width}/>
+    <QuickAccessButton Icon={ResumeIcon} width={width} onClick={() => window.open("/Resume_Goh_Jun_Yi.pdf")}/>
+    <QuickAccessButton Icon={GithubIcon} width={width} onClick={() => window.open("https://github.com/Junyi00")}/>
+    <QuickAccessButton Icon={LinkedinIcon} width={width} onClick={() => window.open("https://sg.linkedin.com/in/goh-jun-yi")}/>
+    <QuickAccessButton Icon={EmailIcon} width={width} onClick={() => window.open("mailto:gohjunyi00@gmail.com")}/>
   </>;
 
   const ContentPageCSS = `relative ${ !isMobile ? "w-full" : "left-0 w-full" } h-screen snap-start`;
