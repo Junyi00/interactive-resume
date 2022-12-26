@@ -66,7 +66,7 @@ const ProjectsPage = ({ className, isMobile, onHover }: ProjectsPageProps) => {
           PROJECTS.map((project, index) => <ProjectEntry id={`carousell_${index}`} key={index} isMobile={isMobile} {...project} />)
         }
       </Carousell> :
-      <div className="flex flex-col h-[85%] gap-5 p-1 overflow-y-auto scrollable scroll-smooth snap-y snap-mandatory [&>*]:snap-start">
+      <div className="flex flex-col h-[85%] w-full gap-5 p-1 overflow-y-auto scrollable scroll-smooth snap-y snap-mandatory [&>*]:snap-start">
         {
           PROJECTS.map((project, index) => <ProjectEntry key={index} isMobile={isMobile} {...project} />)
         }
