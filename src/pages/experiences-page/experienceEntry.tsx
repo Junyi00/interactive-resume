@@ -36,7 +36,7 @@ const ExperienceEntry = (props: ExperienceEntryProps) => {
         <p className="italic text-[15px] text-[#438EFF] mb-2">{props.location}, {props.role}</p>
         <ul className="list-square list-outside marker:text-[#595959]">
         {
-          props.description.map((desc, index) => <li key={index} className="ml-3 mb-2 text-[12px]">
+          props.description.map((desc, index) => <li key={index} className="ml-3 mb-2 text-[14px]">
             {desc}
           </li>)
         }
