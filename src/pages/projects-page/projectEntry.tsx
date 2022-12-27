@@ -18,7 +18,7 @@ interface ProjectEntryProps {
 
 const ProjectEntry = ({ id, name, date, description, isMobile, techStack, links }: ProjectEntryProps) => {
 
-  const sizeCSS = !isMobile ? `w-[100%] max-h-[90%]` : "max-w-[100%] max-h-[90%]";
+  const sizeCSS = !isMobile ? `w-[100%] max-h-[90%]` : "max-w-[100%] h  -fit";
 
   return <div id={id} className={`${sizeCSS} rounded-lg flex-auto 
     flex flex-col gap-2 bg-[#222222] shadow shadow-gray-300`}>
