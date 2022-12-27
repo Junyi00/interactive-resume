@@ -1,3 +1,5 @@
+import { LogoType } from "components/logo-icon/logoIcon";
+import PageHeader from "components/page-header/pageHeader";
 import ExperienceEntry from "./experienceEntry";
 
 import "./experiencePage.css";
@@ -17,7 +19,8 @@ const EXPERIENCES = [
     description: [
       "Creating an online learning platform for Dyslexic Association of Singapore that is engaging and customised to dyslexic students’ learning needs by using a multisensory approach", 
       "Developing a progressive web application using React, NestJS and Recoil",
-    ]
+    ],
+    techStack: [LogoType.React, LogoType.TypeScript],
   },
   {
     title: "Computing for Volunteer Organisations",
@@ -75,22 +78,40 @@ const EXPERIENCES = [
   },
 ]
 
+const EndLine: React.FC<{ className?: string }> = ({ className }) => <div className={`${className} flex flex-row w-full items-center gap-3`}>
+  <div className="border-t-[1px] w-full h-0 border-[#ABABAB] flex-grow"/>
+  <p className="text-[12px] text-[#ABABAB]">END</p>
+  <div className="border-t-[1px] w-full h-0 border-[#ABABAB] flex-grow"/>
+</div>;
+
 const ExperiencesPage = ({ className, isMobile, onHover }: ExperiencesPageProps) => {
   return (
   <div 
     id="experiences" 
-    className={`${className} bg-[#111111] text-[#FFFFFF] h-screen w-full flex flex-col gap-2 justify-center items-start px-5 pt-2`}
+    className={`${className} bg-[#111111] text-[#FFFFFF] ${ !isMobile ? "" : "h-fit"}
+                flex flex-col gap-2 justify-start items-start pt-10`}
     onMouseEnter={onHover}
   >
-    <p className="text-[30px] font-bold tracking-wider">EXPERIENCES</p>
-    <div className={`w-[95%] h-[85%] py-10
-      flex flex-col gap-3 justify-start items-start 
-      overflow-y-scroll scrollable`
-    }>
-      {
-        EXPERIENCES.map((experience, index) => <ExperienceEntry key={index} isMobile={isMobile} {...experience} />)
-      }
-    </div>
+    <PageHeader className="top-[38px] px-5 w-full sticky bg-[#111111]" text={"EXPERIENCES"}/>
+
+    { !isMobile ? 
+      <div className={`w-[95%] h-[90%] py-10
+        flex flex-col gap-3 justify-start items-start 
+        overflow-y-scroll scrollable`
+      }>
+        {
+          EXPERIENCES.map((experience, index) => <ExperienceEntry key={index} isMobile={isMobile} {...experience} />)
+        }
+        <EndLine />
+      </div> :
+      <>
+        {
+          EXPERIENCES.map((experience, index) => <ExperienceEntry className="px-5" key={index} isMobile={isMobile} {...experience} />)
+        }
+        <EndLine className="px-5" />
+      </>
+    }
+    
   </div>);
 };
 

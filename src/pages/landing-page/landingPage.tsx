@@ -33,7 +33,7 @@ const LandingPage = ({ className, isMobile, onHover }: LandingPageProps) => {
       </p>
     </div>
 
-    <img className={ isMobile ? "absolute opacity-10" : "hover:w-[41%]" } src={BackgroundImg} width={isMobile ? "100%" : "40%"}/>
+    <img className={ isMobile ? "fixed opacity-10 hidden" : "hover:w-[41%]" } alt="background" src={BackgroundImg} width={isMobile ? "100%" : "40%"}/>
   </div>;
 };
 

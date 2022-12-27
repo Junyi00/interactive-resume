@@ -1,5 +1,6 @@
 import Carousell from "components/carousell/carousell";
 import { LogoType } from "components/logo-icon/logoIcon";
+import PageHeader from "components/page-header/pageHeader";
 import ProjectEntry from "./projectEntry";
 
 interface ProjectsPageProps {
@@ -43,26 +44,27 @@ const PROJECTS = [
 ]
 
 const ProjectsPage = ({ className, isMobile, onHover }: ProjectsPageProps) => {
-  const itemsAlignmentCSS = !isMobile ? "justify-center items-center" : "justify-center items-start"
+  const itemsAlignmentCSS = !isMobile ? "justify-center items-center" : "justify-start items-start"
 
   return <div 
     id="projects" 
-    className={`${className} bg-[#111111] text-[#FFFFFF] w-full h-screen
-                flex flex-col gap-2 ${itemsAlignmentCSS} px-5 pt-2`} 
+    className={`${className} bg-[#111111] text-[#FFFFFF] ${ !isMobile ? "" : "h-fit"}
+                flex flex-col gap-2 ${itemsAlignmentCSS} pt-10 pb-2`} 
     onMouseEnter={onHover}
   >
-    <p className="text-[30px] font-bold tracking-wider">PROJECTS</p>
+    <PageHeader className={`top-[38px] px-5 ${ isMobile ? "w-full sticky bg-[#111111]" : "w-fit" }`} text={"PROJECTS"}/>
+    
     { !isMobile ?
       <Carousell prefix="project" width="90%">
         {
           PROJECTS.map((project, index) => <ProjectEntry id={`project_${index}`} key={index} isMobile={isMobile} {...project} />)
         }
       </Carousell> :
-      <div className="flex flex-col h-[85%] w-full gap-5 p-1 overflow-y-auto scrollable scroll-smooth snap-y snap-mandatory [&>*]:snap-start">
+      <>
         {
-          PROJECTS.map((project, index) => <ProjectEntry key={index} isMobile={isMobile} {...project} />)
+          PROJECTS.map((project, index) => <ProjectEntry className="mx-5 mb-3" key={index} isMobile={isMobile} {...project} />)
         }
-      </div>
+      </>
     }
   </div> 
 };

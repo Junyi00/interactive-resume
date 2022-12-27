@@ -1,6 +1,7 @@
 import LogoIcon, { LogoType } from "components/logo-icon/logoIcon";
 
 interface ExperienceEntryProps {
+  className?: string;
   title: string;
   period: string;
   location: string;
@@ -18,7 +19,7 @@ const ExperienceEntry = (props: ExperienceEntryProps) => {
   </>;
 
   return (
-    <div className="flex flex-row gap-2 w-full">
+    <div className={`${props.className} flex flex-row gap-2 w-full`}>
 
       <div className="flex flex-col items-center mt-1">
         <div className="w-2 h-2 border border-[#438EFF]"/>

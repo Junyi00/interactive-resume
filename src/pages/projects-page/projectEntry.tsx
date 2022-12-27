@@ -7,6 +7,7 @@ type ProjectLink = {
 }
 
 interface ProjectEntryProps {
+  className?: string;
   id?: string;
   name: string;
   date: string;
@@ -16,11 +17,11 @@ interface ProjectEntryProps {
   isMobile: boolean;
 }
 
-const ProjectEntry = ({ id, name, date, description, isMobile, techStack, links }: ProjectEntryProps) => {
+const ProjectEntry = ({ className="", id, name, date, description, isMobile, techStack, links }: ProjectEntryProps) => {
 
-  const sizeCSS = !isMobile ? `w-[100%] max-h-[90%]` : "max-w-[100%] h  -fit";
+  const sizeCSS = !isMobile ? `w-[100%] max-h-[90%]` : "max-w-[100%] h-fit";
 
-  return <div id={id} className={`${sizeCSS} rounded-lg flex-auto 
+  return <div id={id} className={`${className} ${sizeCSS} rounded-lg flex-auto 
     flex flex-col gap-2 bg-[#222222] shadow shadow-gray-300`}>
       
     <div className="min-w-[50%] w-full h-fit p-2 flex items-center justify-center bg-[#D9D9D9] rounded-t-lg">
@@ -37,7 +38,7 @@ const ProjectEntry = ({ id, name, date, description, isMobile, techStack, links 
         description.map((desc, index) => <p key={index} className="text-[15px]">{desc}</p>)
       }
 
-      <div className="flex flex-wrap gap-14">
+      <div className="flex flex-wrap gap-x-14 gap-y-1">
         {techStack !== undefined && <div className="w-min">
           <p className="text-[#595959] font-bold">Tech</p>
           <div className="h-min w-min flex flex-row gap-1 ">

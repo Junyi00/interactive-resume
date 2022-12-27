@@ -3,6 +3,7 @@ import LandingPage from 'pages/landing-page/landingPage';
 import ExperiencesPage from 'pages/experiences-page/experiencesPage';
 import ProjectsPage from 'pages/projects-page/projectsPage';
 
+import BackgroundImg from 'assets/background_img.png';
 import {ReactComponent as ResumeIcon} from 'assets/icons/resume_btn.svg';
 import {ReactComponent as GithubIcon} from 'assets/icons/github_btn.svg';
 import {ReactComponent as LinkedinIcon} from 'assets/icons/linkedin_btn.svg';
@@ -42,7 +43,7 @@ function App() {
     <QuickAccessButton Icon={EmailIcon} width={width} onClick={() => window.open("mailto:gohjunyi00@gmail.com")}/>
   </>;
 
-  const ContentPageCSS = `relative ${ !isMobile ? "w-full" : "left-0 w-full" } h-screen snap-start`;
+  const ContentPageCSS = `w-full h-full snap-start ${ isMobile ? "min-w-[100%] w-screen" : "" }`;
 
   const PageNavigationButton: React.FC<{text: string, page: number, href: string}> = ({ text, page, href }) => <a 
     href={href}
@@ -74,15 +75,19 @@ function App() {
 
   return (
     <div className={`h-screen w-screen max-w-screen
-                    ${ !isMobile ? "grid grid-rows-1 grid-cols-[auto_auto_auto]" : "flex flex-col" } 
-                    overflow-y-auto scroll-smooth snap-y snap-mandatory bg-[#111111]`}>
+                    ${ !isMobile ?
+                      "grid grid-rows-1 grid-cols-[auto_auto_auto] snap-y snap-mandatory" : 
+                      "flex flex-col min-h-screen max-h-screen" 
+                    } 
+                    overflow-y-auto scroll-smooth bg-[#111111]`}>
+
       { !isMobile ?
         <div className="col-start-1 sticky top-0 h-screen w-fit
                         flex flex-col gap-5 justify-start items-center pl-5">
           <VerticalLine />
           <QuickAccessIcons width="30px"/>
         </div> :
-        <div className="fixed left-0 top-0 w-full h-fit flex flex-row justify-between items-center pt-2 px-5 z-10">
+        <div className="sticky top-0 z-10 w-full h-[38px] flex flex-row justify-between items-center pt-2 px-5 bg-[#111111]">
           <a href="#landing" className="text-[#FFFFFF] text-[20px] tracking-wider">GJY</a>
           <div className="flex flex-row gap-3">
             <QuickAccessIcons width="20px"/>
@@ -90,7 +95,10 @@ function App() {
         </div>
       }
 
-      <div className={`${ !isMobile ? "col-start-2 min-w-0 min-h-0 h-screen w-auto" : "flex-grow w-full" } `}>
+      <div className={`${ !isMobile ? 
+        "col-start-2 min-w-0 min-h-0 h-screen w-auto" : 
+        "w-screen h-full" }`}
+      >
         <LandingPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(0)}/>
         <ExperiencesPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(1)}/>
         <ProjectsPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(2)}/>
@@ -106,7 +114,7 @@ function App() {
       }
 
       { isMobile && 
-        <div className="absolute bottom-0 right-0 w-fit h-fit p-2 flex flex-row justify-end b">
+        <div className="fixed bottom-0 right-0 w-fit h-fit p-2 flex flex-row justify-end">
           <NavigationLeft 
             className="z-10 opacity-30 hover:opacity-90 transition-opacity"
             onClick={onMobileNavigation(true)}
@@ -116,6 +124,10 @@ function App() {
             onClick={onMobileNavigation(false)}
           />
         </div>
+      }
+
+      { isMobile && 
+          <img className="fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-10 pointer-events-none" alt="background" src={BackgroundImg} width="100%"/>
       }
     </div>
   );
