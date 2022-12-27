@@ -1,9 +1,12 @@
+import LogoIcon, { LogoType } from "components/logo-icon/logoIcon";
+
 interface ExperienceEntryProps {
   title: string;
   period: string;
   location: string;
   role: string;
   description: string[];
+  techStack?: LogoType[];
   isMobile?: boolean;
 };
 
@@ -37,6 +40,16 @@ const ExperienceEntry = (props: ExperienceEntryProps) => {
           </li>)
         }
         </ul>
+
+        {props.techStack !== undefined && <div className="w-min">
+          <p className="text-[#595959] font-bold">Tech</p>
+          <div className="h-min w-min flex flex-row gap-1 ">
+            {
+              props.techStack.map((tech, index) => <LogoIcon key={index} name={tech}/>)
+            } 
+          </div>
+        </div>
+        }
       </div>
     </div>
   );
