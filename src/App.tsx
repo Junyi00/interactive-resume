@@ -47,7 +47,7 @@ function App() {
 
   const PageNavigationButton: React.FC<{text: string, page: number, href: string}> = ({ text, page, href }) => <a 
     href={href}
-    className={`${currentPage === page ? "text-[#438EFF]" : "hover:text-[#FFFFFF]"}`}
+    className={`${currentPage === page ? "text-[#438EFF]" : "hover:text-[#FFFFFF] hover:transition-all"}`}
     onClick={() => setCurrentPage(page)}
   >
     {text}
