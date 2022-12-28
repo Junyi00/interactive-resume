@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import LandingPage from 'pages/landing-page/landingPage';
 import ExperiencesPage from 'pages/experiences-page/experiencesPage';
 import ProjectsPage from 'pages/projects-page/projectsPage';
+import InfoPage from 'pages/info-page/infoPage';
 
 import BackgroundImg from 'assets/background_img.png';
 import {ReactComponent as ResumeIcon} from 'assets/icons/resume_btn.svg';
@@ -16,6 +17,7 @@ const PAGE_IDS: { [key: number]: string } = {
   0: "landing",
   1: "experiences",
   2: "projects",
+  3: "info"
 }
 
 function App() {
@@ -102,6 +104,7 @@ function App() {
         <LandingPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(0)}/>
         <ExperiencesPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(1)}/>
         <ProjectsPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(2)}/>
+        <InfoPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(3)}/>
       </div>
       
       { !isMobile &&
@@ -109,6 +112,7 @@ function App() {
           <PageNavigationButton href={`#${PAGE_IDS[0]}`} page={0} text="Welcome"/>
           <PageNavigationButton href={`#${PAGE_IDS[1]}`} page={1} text="Experiences"/>
           <PageNavigationButton href={`#${PAGE_IDS[2]}`} page={2} text="Projects"/>
+          <PageNavigationButton href={`#${PAGE_IDS[3]}`} page={3} text="Info"/>
           <VerticalLine />
         </div> 
       }

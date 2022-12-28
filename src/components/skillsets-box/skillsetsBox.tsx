@@ -44,7 +44,7 @@ const SkillComponent: React.FC<{
 
 const SkillsetsBox = ({ skillsets, className, singleColumn }: SkillsetsBoxProps) => {
   return <div className={`${className} grid gap-x-5 ${ singleColumn ? "grid-cols-1" : "grid-cols-2" }
-                          w-full rounded-lg bg-[#222222] p-2 shadow-sm shadow-gray-300`}>
+                           w-fit max-w-full rounded-lg bg-[#222222] py-2 pl-3 pr-5 shadow-sm shadow-gray-300`}>
     { Object.keys(skillsets).map((skill, index) => <SkillComponent 
         key={index} 
         title={skill} 
