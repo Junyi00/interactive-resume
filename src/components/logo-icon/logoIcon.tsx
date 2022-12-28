@@ -139,7 +139,7 @@ const LogoIcon = ({ name, length, link }: LogoIconProps) => {
   const onLogoClick = () => window.open(link || LogoLink[name]);
 
   const Icon = LogoSVG[name];
-  return <div className="flex flex-col items-center [&>*]:hover:opacity-70 [&>p]:hover:visible w-[32px]" onClick={onLogoClick}>
+  return <div className="flex flex-col items-center cursor-pointer [&>*]:hover:opacity-70 [&>p]:hover:visible w-[32px]" onClick={onLogoClick}>
     <Icon width={length || DEFAULT_LENGTH} height={length || DEFAULT_LENGTH} />
     <p className="text-[10px] invisible">{name}</p>
   </div>

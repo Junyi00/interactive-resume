@@ -7,7 +7,7 @@ interface QuickAccessButtonProps {
 
 const QuickAccessButton = ({ Icon, width, onClick }: QuickAccessButtonProps) => {
   return <div 
-    className="w-fit h-fit [&>svg>path]:hover:opacity-50"
+    className="w-fit h-fit cursor-pointer [&>svg>path]:hover:opacity-50"
     onClick={onClick}
   >
     <Icon width={width}/>
