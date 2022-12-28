@@ -11,6 +11,8 @@ import {ReactComponent as LinkedinIcon} from 'assets/icons/linkedin.svg';
 import {ReactComponent as EmailIcon} from 'assets/icons/email.svg';
 import QuickAccessButton from 'components/quick-access-button/quickAccessButton';
 
+import ProfileData from 'data/profileData';
+
 const PAGE_IDS: { [key: number]: string } = {
   0: "landing",
   1: "experiences",
@@ -37,10 +39,10 @@ function App() {
 
   const VerticalLine = () => <div className="h-[5%] w-0 border-l border-[#FFFFFF] gap-1"/>;
   const QuickAccessIcons: React.FC<{width: string}> = ({ width }) => <>
-    <QuickAccessButton Icon={ResumeIcon} width={width} onClick={() => window.open("/Resume_Goh_Jun_Yi.pdf")}/>
-    <QuickAccessButton Icon={GithubIcon} width={width} onClick={() => window.open("https://github.com/Junyi00")}/>
-    <QuickAccessButton Icon={LinkedinIcon} width={width} onClick={() => window.open("https://sg.linkedin.com/in/goh-jun-yi")}/>
-    <QuickAccessButton Icon={EmailIcon} width={width} onClick={() => window.open("mailto:gohjunyi00@gmail.com")}/>
+    <QuickAccessButton Icon={ResumeIcon} width={width} onClick={() => window.open(ProfileData.resume)}/>
+    <QuickAccessButton Icon={GithubIcon} width={width} onClick={() => window.open(ProfileData.links.github)}/>
+    <QuickAccessButton Icon={LinkedinIcon} width={width} onClick={() => window.open(ProfileData.links.linkedin)}/>
+    <QuickAccessButton Icon={EmailIcon} width={width} onClick={() => window.open(`mailto:${ProfileData.email}`)}/>
   </>;
 
   const ContentPageCSS = `w-full h-full snap-start ${ isMobile ? "min-w-[100%] w-screen" : "" }`;

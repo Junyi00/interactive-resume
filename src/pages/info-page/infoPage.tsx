@@ -8,6 +8,8 @@ import {ReactComponent as LinkedinIcon} from 'assets/icons/linkedin.svg';
 import {ReactComponent as EmailIcon} from 'assets/icons/email.svg';
 import SkillsetsBox, { Skillsets } from "components/skillsets-box/skillsetsBox";
 
+import ProfileData from 'data/profileData';
+
 interface InfoPageProps {
   className: string;
   isMobile: boolean;
@@ -89,10 +91,10 @@ const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
         <p className="break-normal">Thanks for reading this far!</p>
         <p className="break-normal">Feel free to drop a message to say hello!</p>
         <div className="flex flex-row justify-center items-center gap-5 mt-5">
-          <QuickAccessButton Icon={ResumeIcon} width={iconLength} onClick={() => window.open("/Resume_Goh_Jun_Yi.pdf")}/>
-          <QuickAccessButton Icon={GithubIcon} width={iconLength} onClick={() => window.open("https://github.com/Junyi00")}/>
-          <QuickAccessButton Icon={LinkedinIcon} width={iconLength} onClick={() => window.open("https://sg.linkedin.com/in/goh-jun-yi")}/>
-          <QuickAccessButton Icon={EmailIcon} width={iconLength} onClick={() => window.open("mailto:gohjunyi00@gmail.com")}/>
+          <QuickAccessButton Icon={ResumeIcon} width={iconLength} onClick={() => window.open(ProfileData.resume)}/>
+          <QuickAccessButton Icon={GithubIcon} width={iconLength} onClick={() => window.open(ProfileData.links.github)}/>
+          <QuickAccessButton Icon={LinkedinIcon} width={iconLength} onClick={() => window.open(ProfileData.links.linkedin)}/>
+          <QuickAccessButton Icon={EmailIcon} width={iconLength} onClick={() => window.open(`mailto:${ProfileData.email}`)}/>
         </div>
       </div>
     </div>
