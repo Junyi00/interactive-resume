@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlnsDc="http://purl.org/dc/elements/1.1/"
+   xmlnsCc="http://creativecommons.org/ns#"
+   xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlnsSvg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 210.21 280.43"
+   version="1.1"
+   sodipodiDocname="pandas_mark.svg"
+   inkscapeVersion="0.92.4 (unknown)">
+  <metadata
+     id="metadata27">
+    <rdfRDF>
+      <ccWork
+         rdfAbout="">
+        <dcFormat>image/svg+xml</dcFormat>
+        <dcType
+           rdfResource="http://purl.org/dc/dcmitype/StillImage" />
+      </ccWork>
+    </rdfRDF>
+  </metadata>
+  <sodipodiNamedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscapePageopacity="0"
+     inkscapePageshadow="2"
+     inkscapeWindow-width="1131"
+     inkscapeWindow-height="921"
+     id="namedview25"
+     showgrid="false"
+     inkscapeZoom="0.84156476"
+     inkscapeCx="107.48153"
+     inkscapeCy="140.215"
+     inkscapeWindow-x="0"
+     inkscapeWindow-y="0"
+     inkscapeWindow-maximized="0"
+     inkscapeCurrent-layer="Layer_1" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#130754;}.cls-2{fill:#48e5ac;}.cls-3{fill:#e70488;}</style>
+  </defs>
+  <title
+     id="title6">Artboard 61</title>
+  <rect
+     class="cls-1"
+     x="74.51"
+     y="43.03"
+     width="24.09"
+     height="50.02"
+     id="rect8" />
+  <rect
+     class="cls-1"
+     x="74.51"
+     y="145.78"
+     width="24.09"
+     height="50.02"
+     id="rect10" />
+  <rect
+     class="cls-2"
+     x="74.51"
+     y="107.65"
+     width="24.09"
+     height="23.6"
+     id="rect12"
+     style="fill:#ffca00;fill-opacity:1" />
+  <rect
+     class="cls-1"
+     x="35.81"
+     y="84.15"
+     width="24.09"
+     height="166.27"
+     id="rect14" />
+  <rect
+     class="cls-1"
+     x="112.41"
+     y="187.05"
+     width="24.09"
+     height="50.02"
+     id="rect16" />
+  <rect
+     class="cls-1"
+     x="112.41"
+     y="84.21"
+     width="24.09"
+     height="50.02"
+     id="rect18" />
+  <rect
+     class="cls-3"
+     x="112.41"
+     y="148.84"
+     width="24.09"
+     height="23.6"
+     id="rect20" />
+  <rect
+     class="cls-1"
+     x="150.3"
+     y="30"
+     width="24.09"
+     height="166.27"
+     id="rect22" />
+</svg>
