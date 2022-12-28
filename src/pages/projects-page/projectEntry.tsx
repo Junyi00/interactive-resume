@@ -22,7 +22,7 @@ const ProjectEntry = ({ className="", id, name, date, description, isMobile, tec
   const sizeCSS = !isMobile ? `w-[100%] max-h-[90%]` : "max-w-[100%] h-fit";
 
   return <div id={id} className={`${className} ${sizeCSS} rounded-lg flex-auto 
-    flex flex-col gap-2 bg-[#222222] shadow shadow-gray-300`}>
+    flex flex-col gap-2 bg-[#222222] shadow-sm shadow-gray-300`}>
       
     <div className="min-w-[50%] w-full h-fit p-2 flex items-center justify-center bg-[#D9D9D9] rounded-t-lg">
       <img alt={name + "_image"} src={RecyclopsImage} width="50%"/>
