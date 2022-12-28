@@ -95,7 +95,7 @@ const ExperiencesPage = ({ className, isMobile, onHover }: ExperiencesPageProps)
     <PageHeader className="top-[38px] px-5 w-full sticky bg-[#111111]" text={"EXPERIENCES"}/>
 
     { !isMobile ? 
-      <div className={`w-[95%] h-[90%] py-10
+      <div className={`w-[95%] h-[90%] py-10 px-5
         flex flex-col gap-3 justify-start items-start 
         overflow-y-scroll scrollable`
       }>
