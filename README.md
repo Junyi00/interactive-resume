@@ -8,9 +8,11 @@ Visit my portfolio [here](https://gohjunyi.dev)!
 
 ## Technology Used
 
-<img src="src/assets/icons/typescript.svg" width="30px" />
-<img src="src/assets/icons/react.svg" width="30px" />
-<img src="src/assets/icons/tailwindcss-icon.svg" width="30px" />
+<div style="display: flex; gap: 0.5em;">
+  <img src="src/assets/icons/typescript.svg" width="30px" />
+  <img src="src/assets/icons/react.svg" width="30px" />
+  <img src="src/assets/icons/tailwindcss-icon.svg" width="30px" />
+</div>
 
 ## Screenshots
 
