@@ -25,7 +25,7 @@ const ProjectEntry = ({ className="", id, name, date, description, image, bgColo
   return <div id={id} className={`${className} ${sizeCSS} rounded-lg flex-auto 
     flex flex-col gap-2 bg-[#222222] shadow-sm shadow-gray-300`}>
       
-    <div className={`min-w-[50%] w-full h-fit p-2 flex items-center justify-center bg-[${bgColor}] rounded-t-lg`}>
+    <div style={{ backgroundColor: bgColor }} className={`min-w-[50%] w-full h-fit p-2 flex items-center justify-center rounded-t-lg`}>
       <img alt={name + "_image"} src={image} width="50%"/>
     </div>
 
