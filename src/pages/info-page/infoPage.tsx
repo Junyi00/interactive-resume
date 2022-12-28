@@ -58,7 +58,7 @@ const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
         <div className="flex flex-col gap-1">
           <PageHeader className={`${isMobile ? `sticky top-[38px] w-full bg-[#111111]` : ""} px-5`} text={"EDUCATION"}/>
           <div className="px-5">
-            <p className="text-[25px] leading-[30px]">National University of Singapore</p>
+            <p className="text-[25px] leading-[30px] text-[#438EFF]">National University of Singapore</p>
             <p className="text-[15px] text-[#ADADAD] font-bold">August 2021 - Current</p>
             <StyledList>
               <li>Computing for Voluntary Welfare Organisations (May 2022)</li>

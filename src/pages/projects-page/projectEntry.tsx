@@ -1,4 +1,3 @@
-import RecyclopsImage from "assets/projects/recyclops/Recyclops.png";
 import LogoIcon, { LogoType } from "components/logo-icon/logoIcon";
 
 type ProjectLink = {
@@ -12,23 +11,25 @@ interface ProjectEntryProps {
   name: string;
   date: string;
   description: string[];
+  image: string;
+  bgColor?: string;
   techStack?: LogoType[];
   links?: ProjectLink[];
   isMobile: boolean;
 }
 
-const ProjectEntry = ({ className="", id, name, date, description, isMobile, techStack, links }: ProjectEntryProps) => {
+const ProjectEntry = ({ className="", id, name, date, description, image, bgColor="#D9D9D9", isMobile, techStack, links }: ProjectEntryProps) => {
 
   const sizeCSS = !isMobile ? `w-[100%] max-h-[90%]` : "max-w-[100%] h-fit";
 
   return <div id={id} className={`${className} ${sizeCSS} rounded-lg flex-auto 
     flex flex-col gap-2 bg-[#222222] shadow-sm shadow-gray-300`}>
       
-    <div className="min-w-[50%] w-full h-fit p-2 flex items-center justify-center bg-[#D9D9D9] rounded-t-lg">
-      <img alt={name + "_image"} src={RecyclopsImage} width="50%"/>
+    <div className={`min-w-[50%] w-full h-fit p-2 flex items-center justify-center bg-[${bgColor}] rounded-t-lg`}>
+      <img alt={name + "_image"} src={image} width="50%"/>
     </div>
 
-    <div className="flex flex-col gap-4 px-2 py-1">
+    <div className="flex-grow flex flex-col gap-4 px-2 py-1">
       <div className="flex flex-row justify-between items-center">
         <p className="text-[20px] font-bold tracking-wider">{name.toUpperCase()}</p>
         <p className="text-[15px] font-bold text-[#438EFF]">{date}</p>
@@ -38,8 +39,8 @@ const ProjectEntry = ({ className="", id, name, date, description, isMobile, tec
         description.map((desc, index) => <p key={index} className="text-[15px]">{desc}</p>)
       }
 
-      <div className="flex flex-wrap gap-x-14 gap-y-1">
-        {techStack !== undefined && <div className="w-min">
+      <div className="flex-grow flex flex-wrap gap-x-14 gap-y-1">
+        {techStack !== undefined && <div className="w-min flex flex-col justify-end">
           <p className="text-[#595959] font-bold">Tech</p>
           <div className="h-min w-min flex flex-row gap-1 ">
             {
@@ -48,7 +49,7 @@ const ProjectEntry = ({ className="", id, name, date, description, isMobile, tec
           </div>
         </div>
         }
-        {links !== undefined && <div className="w-min">
+        {links !== undefined && <div className="w-min flex flex-col justify-end">
           <p className="text-[#595959] font-bold">Links</p>
           <div className="h-min w-min flex flex-row gap-1 ">
             {

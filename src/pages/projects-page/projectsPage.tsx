@@ -3,6 +3,9 @@ import { LogoType } from "components/logo-icon/logoIcon";
 import PageHeader from "components/page-header/pageHeader";
 import ProjectEntry from "./projectEntry";
 
+import RecyclopsImage from "assets/projects/recyclops/Recyclops.png";
+import FootprintImage from "assets/projects/footprint/footprint.jpg";
+
 interface ProjectsPageProps {
   className: string;
   isMobile: boolean;
@@ -17,6 +20,8 @@ const PROJECTS = [
       "A Progressive Web App that aims to simplify recycling for Singaporeans.",
       "Empowered by machine learning, the user can scan any household object. Recyclops will inform them if it is safe to recycle, how to recycle it and whether any special instructions are needed. It also serves as an information dashboard of articles so users can access them easily to learn more."
     ],
+    image: RecyclopsImage,
+    bgColor: "#D9D9D9",
     techStack: [LogoType.TypeScript, LogoType.React, LogoType.Ionic, LogoType.Redux, LogoType.TailwindCSS, LogoType.Python, LogoType.PyTorch],
     links: [
       { location: LogoType.Github, link: "https://github.com/Recyclops-LifeHack-2022-Singapore" },
@@ -26,20 +31,19 @@ const PROJECTS = [
     ],
   },
   {
-    name: "Lorem Ipsum",
-    date: "August 2023",
+    name: "footprint",
+    date: "December 2021",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare sodales orci, ut pulvinar quam iaculis at. Phasellus vulputate velit fermentum fermentum ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "Nunc sollicitudin massa et enim pellentesque, nec aliquet nibh volutpat. Sed sodales tortor ut pulvinar hendrerit. Vestibulum auctor erat ac accumsan gravida. Proin ac sapien eget ex aliquam porttitor vitae non ipsum."
+      "A web application to visualise the proportion of the Earth we have visited, our 'footprint' on the world.",
+      "This shows you how much of the world you already covered by extracting all those 'footprints' you have clocked in your favourite exercise applications. (e.g NRC, Strava)",
+      "Gives you the power to record where you have walked and explored on a day to basis. Colour the map with your 'footprints' as you explore the unknown.",
     ],
-  },
-  {
-    name: "Paper Towel",
-    date: "May 2021",
-    description: [
-      "Morbi ac est a eros euismod feugiat. Pellentesque cursus fermentum nunc, vitae vulputate urna congue sit amet. Nullam rutrum tempus arcu sit amet ornare. Quisque euismod porttitor odio, in consectetur sem pretium fermentum. Suspendisse potenti. Etiam eleifend vitae eros sed lobortis.",
-      "Sed faucibus tortor quis lacus aliquet ultrices ut pellentesque lectus. Sed elementum ante tempus ipsum convallis, nec euismod eros mollis. Vivamus ultrices aliquam justo, id vestibulum nulla fringilla sed. Nullam tortor quam, commodo vel congue sit amet, mollis et sem."
-    ],
+    image: FootprintImage,
+    bgColor: "#404e5b",
+    techStack: [LogoType.TypeScript, LogoType.React, LogoType.Python, LogoType.Ruby, LogoType.Rails, LogoType.PostgreSQL],
+    links: [
+      { location: LogoType.DevPost, link: "https://devpost.com/software/footprint-4ad3tz" },
+    ]
   },
 ]
 
