@@ -32,11 +32,14 @@ const Carousell = ({ children, prefix, width }: CarousellProps) => {
       {children}
     </div>
     <NavigationLeft 
-      className="absolute left-0 translate-x-full top-[50%] -translate-y-1/2 text-[#FFFFFF] z-10 opacity-30 hover:opacity-90 transition-opacity"
+      className={`absolute left-0 translate-x-full top-[50%] -translate-y-1/2 text-[#FFFFFF] z-10 opacity-50 hover:opacity-90 transition-opacity
+                  ${ currentSlide === 0 ? "pointer-events-none !opacity-10" : "" }`}
       onClick={onNavClick(true)}
+      
     />
     <NavigationRight 
-      className="absolute right-0 -translate-x-full top-[50%] -translate-y-1/2 text-[#FFFFFF] z-10 opacity-30 hover:opacity-90 transition-opacity"
+      className={`absolute right-0 -translate-x-full top-[50%] -translate-y-1/2 text-[#FFFFFF] z-10 opacity-30 hover:opacity-90 transition-opacity 
+                  ${ currentSlide === Children.count(children) - 1 ? "pointer-events-none !opacity-10" : "" }`}
       onClick={onNavClick(false)}
     />
     {
