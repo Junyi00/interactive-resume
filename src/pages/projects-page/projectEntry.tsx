@@ -29,7 +29,7 @@ const ProjectEntry = ({ className="", id, name, date, description, image, bgColo
       <img alt={name + "_image"} src={image} width="50%"/>
     </div>
 
-    <div className="flex-grow flex flex-col gap-4 px-2 py-1">
+    <div className="flex-grow flex flex-col gap-4 px-3 py-1">
       <div className="flex flex-row justify-between items-center">
         <p className="text-[20px] font-bold tracking-wider">{name.toUpperCase()}</p>
         <p className="text-[15px] font-bold text-[#438EFF]">{date}</p>
