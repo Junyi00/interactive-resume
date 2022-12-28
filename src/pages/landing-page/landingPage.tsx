@@ -22,7 +22,7 @@ const LandingPage = ({ className, isMobile, onHover }: LandingPageProps) => {
         <p className="text-right text-[#8c8c8c] text-[40px] leading-[50px]">Hello there! I am</p>
 
         <div className="w-fit flex flex-col items-end gap-1">
-          <p className="text-right text-[#FFFFFF] text-[40px] leading-[50px] hover:text-[45px]">Goh Jun Yi</p>
+          <p className="text-right text-[#FFFFFF] text-[40px] leading-[50px] hover:text-[50px] transition-all duration-100 ease-in-out">Goh Jun Yi</p>
           <HorizontalLine className="w-full"/>
           <HorizontalLine className="w-[60%]"/>
         </div>
@@ -33,7 +33,7 @@ const LandingPage = ({ className, isMobile, onHover }: LandingPageProps) => {
       </p>
     </div>
 
-    <img className={ isMobile ? "fixed opacity-10 hidden" : "hover:w-[41%]" } alt="background" src={BackgroundImg} width={isMobile ? "100%" : "40%"}/>
+    <img className={ isMobile ? "fixed opacity-10 hidden" : "hover:w-[45%] transition-all duration-100 ease-in-out" } alt="background" src={BackgroundImg} width={isMobile ? "100%" : "40%"}/>
   </div>;
 };
 
