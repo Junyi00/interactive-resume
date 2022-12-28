@@ -5,10 +5,10 @@ import ProjectsPage from 'pages/projects-page/projectsPage';
 import InfoPage from 'pages/info-page/infoPage';
 
 import BackgroundImg from 'assets/background_img.png';
-import {ReactComponent as ResumeIcon} from 'assets/icons/resume_btn.svg';
-import {ReactComponent as GithubIcon} from 'assets/icons/github_btn.svg';
-import {ReactComponent as LinkedinIcon} from 'assets/icons/linkedin_btn.svg';
-import {ReactComponent as EmailIcon} from 'assets/icons/email_btn.svg';
+import {ReactComponent as ResumeIcon} from 'assets/icons/resume.svg';
+import {ReactComponent as GithubIcon} from 'assets/icons/github.svg';
+import {ReactComponent as LinkedinIcon} from 'assets/icons/linkedin.svg';
+import {ReactComponent as EmailIcon} from 'assets/icons/email.svg';
 import QuickAccessButton from 'components/quick-access-button/quickAccessButton';
 
 const PAGE_IDS: { [key: number]: string } = {
