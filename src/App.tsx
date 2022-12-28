@@ -57,22 +57,6 @@ function App() {
     setCurrentPage(pageNum);
   };
 
-  // const onMobileNavigation = (left: boolean) => () => {
-  //   if ((left && currentPage === 0) || (!left && currentPage === Object.keys(PAGE_IDS).length - 1)) {
-  //     return;
-  //   }
-
-  //   const nextPage: number = left ? currentPage - 1 : currentPage + 1;
-  //   const targetRef = document.getElementById(PAGE_IDS[nextPage]);
-
-  //   if (targetRef === null) {
-  //     return;
-  //   }
-
-  //   targetRef.scrollIntoView({ behavior: "smooth", block: "start" });
-  //   setCurrentPage(nextPage);
-  // }
-
   return (
     <div className={`h-screen w-screen max-w-screen
                     ${ !isMobile ?
@@ -114,19 +98,6 @@ function App() {
           <VerticalLine />
         </div> 
       }
-
-      {/* { isMobile && 
-        <div className="fixed bottom-0 right-0 w-fit h-fit p-2 flex flex-row justify-end">
-          <NavigationLeft 
-            className="z-10 opacity-30 hover:opacity-90 transition-opacity"
-            onClick={onMobileNavigation(true)}
-          />
-          <NavigationRight
-            className="z-10 opacity-30 hover:opacity-90 transition-opacity"
-            onClick={onMobileNavigation(false)}
-          />
-        </div>
-      } */}
 
       { isMobile && 
           <img className="fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-10 pointer-events-none" alt="background" src={BackgroundImg} width="100%"/>
