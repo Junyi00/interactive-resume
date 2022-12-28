@@ -49,9 +49,9 @@ const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
                 flex flex-col gap-5 justify-between pt-10`}
   >
     <div className={`flex flex-row ${isMobile ? "flex-wrap" : "justify-evenly"} gap-1 w-full`}> 
-      <div className={`flex flex-col ${isMobile ? "w-full" : ""}`}>
+      <div className={`flex flex-col gap-1 ${isMobile ? "w-full" : ""}`}>
         <PageHeader className={`${isMobile ? `sticky top-[38px] w-full bg-[#111111]` : ""} px-5`} text={"SKILLSETS"}/>
-        <SkillsetsBox className={`m-5`} skillsets={skillsetsData} singleColumn={isMobile}/>
+        <div className="w-full h-fit px-5"><SkillsetsBox skillsets={skillsetsData} singleColumn={false}/></div>
       </div>
 
       <div className={`flex flex-col ${!isMobile ? "justify-center" : ""} gap-5`}>
