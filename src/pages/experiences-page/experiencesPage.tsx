@@ -20,7 +20,7 @@ const EXPERIENCES = [
       "Creating an online learning platform for Dyslexic Association of Singapore that is engaging and customised to dyslexic students’ learning needs by using a multisensory approach", 
       "Developing a progressive web application using React, NestJS and Recoil",
     ],
-    techStack: [LogoType.React, LogoType.TypeScript],
+    techStack: [LogoType.TypeScript, LogoType.React],
   },
   {
     title: "Computing for Volunteer Organisations",
@@ -32,49 +32,32 @@ const EXPERIENCES = [
       "Deployed staging environments with Capistrano, Nginx and GitLab’s CI/CD",
       "Spearheaded the upgrade of Ruby on Rails backend from 5.2.0 to 6.1.6, removing unsupported gems and upgrading dependencies",
       "Maintained relational databases on PostgreSQL and backend APIs for a decade old Ruby on Rails application",
-    ]
+    ],
+    techStack: [LogoType.Ruby, LogoType.JavaScript, LogoType.Ionic, LogoType.Rails, LogoType.PostgreSQL, LogoType.Nginx],
   },
   {
-    title: "Paper Marchel",
-    period: "Jan 2021 - Aug 2021",
+    title: "Medical Operations Task Force",
+    period: "April 2020 – May 2020",
     location: "Singapore",
-    role: "Software Engineer",
+    role: "Computer Vision Engineer",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare sodales orci, ut pulvinar quam iaculis at.", 
-      "Nunc sollicitudin massa et enim pellentesque, nec aliquet nibh volutpat. Sed sodales tortor ut pulvinar hendrerit. ",
-      "Vestibulum auctor erat ac accumsan gravida.",
-    ]
+      "MOTF was formed in 2020 to assist Ministry of Health (MOH) in managing the rise in Covid-19 cases", 
+      "Developed 3D visualisation web application of Covid-19 cases for spatial analysis of spread with DeckGL",
+      "Trained machine learning models on graph database to predict potential Covid19 clusters",
+    ],
+    techStack: [LogoType.Python, LogoType.JavaScript, LogoType.Pandas, LogoType.Neo4J],
   },
   {
-    title: "One Cycle Pte. Ltd.",
-    period: "Jan 2020 - Mar 2020",
+    title: "Singapore Armed Forces",
+    period: " March 2020 – July 2021",
     location: "Singapore",
-    role: "Software Developer",
+    role: "Computer Vision Engineer",
     description: [
-      "Aenean lacinia ex molestie dolor convallis rutrum. Pellentesque ultricies molestie dapibus. Ut at mattis elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 
-      "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas laoreet elit non auctor semper. Donec nunc neque, luctus et sem ut, accumsan ornare ligula.",
-    ]
-  },
-  {
-    title: "Bravoda Loresa",
-    period: "May 2019",
-    location: "Singapore",
-    role: "Software Developer",
-    description: [
-      "Proin ac sapien eget ex aliquam porttitor vitae non ipsum.", 
-      "Aenean ornare sodales orci, ut pulvinar quam iaculis at.",
-      "Phasellus vulputate velit fermentum fermentum ornare.",
-    ]
-  },
-  {
-    title: "Potato Life",
-    period: "Jan 2019 - Feb 2019",
-    location: "Singapore",
-    role: "Developer",
-    description: [
-      "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.", 
-      "Donec nunc neque, luctus et sem ut, accumsan ornare ligula.",
-    ]
+      "Designed database architecture to track the training and testing of machine learning models against datasets and metrics", 
+      "Maintained and developed task management extensions for an in-house geospatial software and QGIS separately with Java",
+      "Created docker images for deployment of applications to various military units",
+    ],
+    techStack: [LogoType.Python, LogoType.JavaScript, LogoType.Java, LogoType.TensorFlow, LogoType.PostgreSQL, LogoType.Docker]
   },
 ]
 
