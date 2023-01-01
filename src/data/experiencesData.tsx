@@ -10,7 +10,7 @@ const ExperiencesData = [
       "Creating an online learning platform for Dyslexic Association of Singapore that is engaging and customised to dyslexic students’ learning needs by using a multisensory approach", 
       "Developing a progressive web application using React, NestJS and Recoil",
     ],
-    techStack: [LogoType.TypeScript, LogoType.React],
+    techStack: [LogoType.TypeScript, LogoType.React, LogoType.Recoil],
   },
   {
     title: "Computing for Volunteer Organisations",

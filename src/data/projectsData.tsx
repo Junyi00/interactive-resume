@@ -13,7 +13,7 @@ const ProjectsData = [
     ],
     image: RecyclopsImage,
     bgColor: "#D9D9D9",
-    techStack: [LogoType.TypeScript, LogoType.React, LogoType.Ionic, LogoType.Redux, LogoType.TailwindCSS, LogoType.Python, LogoType.PyTorch],
+    techStack: [LogoType.TypeScript,  LogoType.Python, LogoType.React, LogoType.Ionic, LogoType.Redux, LogoType.TailwindCSS, LogoType.PyTorch],
     links: [
       { location: LogoType.Github, link: "https://github.com/Recyclops-LifeHack-2022-Singapore" },
       { location: LogoType.Figma, link: "https://www.figma.com/file/Von8ACBD5yA7R6gY5gBqIv/Recyclops?node-id=0%3A1" },

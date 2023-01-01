@@ -1,38 +1,19 @@
 import PageHeader from "components/page-header/pageHeader";
 import QuickAccessButton from "components/quick-access-button/quickAccessButton";
-import { LogoType } from "components/logo-icon/logoIcon";
 
 import {ReactComponent as ResumeIcon} from 'assets/icons/resume.svg';
 import {ReactComponent as GithubIcon} from 'assets/icons/github.svg';
 import {ReactComponent as LinkedinIcon} from 'assets/icons/linkedin.svg';
 import {ReactComponent as EmailIcon} from 'assets/icons/email.svg';
-import SkillsetsBox, { Skillsets } from "components/skillsets-box/skillsetsBox";
+import SkillsetsBox from "components/skillsets-box/skillsetsBox";
 
 import ProfileData from 'data/profileData';
+import SkillsetsData from "data/skillsetsData";
 
 interface InfoPageProps {
   className: string;
   isMobile: boolean;
   onHover: () => void;
-}
-
-const skillsetsData: Skillsets = {
-  Languages: {
-    experienced: [LogoType.Python, LogoType.Java, LogoType.JavaScript, LogoType.TypeScript],
-    familiar: [LogoType.C, LogoType.Ruby],
-  },
-  Frontend: {
-    experienced: [LogoType.React, LogoType.TailwindCSS, LogoType.Redux, LogoType.MaterialUI, LogoType.Storybook],
-    familiar: [LogoType.Ionic, LogoType.Dash],
-  },
-  Backend: {
-    experienced: [LogoType.PostgreSQL, LogoType.Flask, LogoType.Rails],
-    familiar: [LogoType.MongoDB, LogoType.Django, LogoType.Neo4J],
-  },
-  Others: {
-    experienced: [LogoType.Git, LogoType.Docker, LogoType.TensorFlow, LogoType.PyTorch],
-    familiar: [LogoType.Nginx]
-  }
 }
 
 const StyledList: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -53,7 +34,7 @@ const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
     <div className={`flex flex-row ${isMobile ? "flex-wrap" : "justify-evenly"} gap-5 w-full`}> 
       <div className={`flex flex-col gap-1 ${isMobile ? "w-full" : ""}`}>
         <PageHeader className={`${isMobile ? `sticky top-[38px] w-full bg-[#111111]` : ""} px-5`} text={"SKILLSETS"}/>
-        <div className="w-full h-fit px-5"><SkillsetsBox skillsets={skillsetsData} singleColumn={false}/></div>
+        <div className="w-full h-fit px-5"><SkillsetsBox skillsets={SkillsetsData} singleColumn={false}/></div>
       </div>
 
       <div className={`flex flex-col ${!isMobile ? "justify-center" : ""} gap-5`}>
