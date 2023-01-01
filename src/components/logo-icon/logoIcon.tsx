@@ -28,6 +28,7 @@ import {ReactComponent as Neo4JIcon} from "assets/icons/neo4j-icon-white.svg";
 import {ReactComponent as NginxIcon} from "assets/icons/nginx-icon.svg"; 
 import {ReactComponent as MySQLIcon} from "assets/icons/mysql-icon.svg"; 
 import {ReactComponent as PandasIcon} from "assets/icons/pandas.svg"
+import {ReactComponent as RecoilIcon} from "assets/icons/recoil.svg";
 
 export enum LogoType {
   React = "React",
@@ -60,6 +61,7 @@ export enum LogoType {
   Nginx = "Nginx",
   MySQL = "MySQL",
   Pandas = "Pandas",
+  Recoil = "Recoil",
 }
 
 const LogoSVG = {
@@ -92,7 +94,8 @@ const LogoSVG = {
   Neo4J: Neo4JIcon,
   Nginx: NginxIcon,
   MySQL: MySQLIcon,
-  Pandas: PandasIcon, 
+  Pandas: PandasIcon,
+  Recoil: RecoilIcon,
 }
 
 const LogoLink = {
@@ -126,6 +129,7 @@ const LogoLink = {
   Nginx: "https://www.nginx.com/",
   MySQL: "https://www.mysql.com/",
   Pandas: "https://pandas.pydata.org/",
+  Recoil: "https://recoiljs.org/",
 }
 
 interface LogoIconProps {
