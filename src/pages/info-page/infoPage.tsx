@@ -78,7 +78,8 @@ const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
             <StyledList>
               <li>Goh Chok Tong’s Young Student Leader Award (2018)</li>
               <li>NSF of the Year 2021</li>
-              <li>Deans List (AY2122 Sem 2)</li>
+              <li>Dean's List (AY21/22 Sem 2)</li>
+              <li>Dean's List (AY22/23 Sem 2)</li>
             </StyledList>
           </div>
         </div>
