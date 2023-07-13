@@ -22,10 +22,10 @@ const ExperiencesPage = ({ className, isMobile, onHover }: ExperiencesPageProps)
   <div 
     id="experiences" 
     className={`${className} bg-background text-text ${ !isMobile ? "" : "h-fit"}
-                flex flex-col gap-2 justify-start items-start pt-10`}
+                flex flex-col gap-2 justify-start items-start`}
     onMouseEnter={onHover}
   >
-    <PageHeader className="top-[38px] px-5 w-full sticky bg-background" text={"EXPERIENCES"}/>
+    <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 w-full bg-background" text={"EXPERIENCES"}/>
 
     { !isMobile ? 
       <div className={`w-[95%] h-[90%] py-10 px-5
