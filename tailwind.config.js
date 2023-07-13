@@ -11,7 +11,18 @@ module.exports = {
       square: 'square',
       roman: 'upper-roman',
     },
-    extend: {},
+    extend: {
+      colors: {
+        background: '#FFFDFA',
+        'background-card': '#F3F1ED',
+        primary: '#438EFF',
+        'primary-light': '#A9CCFF',
+        text: '#333333',
+        subtext: '#595959',
+        icon: '#333333',
+        line: '#ADADAD',
+      }
+    },
   },
   plugins: [],
 }

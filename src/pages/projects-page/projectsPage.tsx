@@ -15,11 +15,11 @@ const ProjectsPage = ({ className, isMobile, onHover }: ProjectsPageProps) => {
 
   return <div 
     id="projects" 
-    className={`${className} bg-[#111111] text-[#FFFFFF] ${ !isMobile ? "" : "h-fit"}
+    className={`${className} bg-background text-text ${ !isMobile ? "" : "h-fit"}
                 flex flex-col gap-2 ${itemsAlignmentCSS} pt-10 pb-2`} 
     onMouseEnter={onHover}
   >
-    <PageHeader className={`top-[38px] px-5 ${ isMobile ? "w-full sticky bg-[#111111]" : "w-fit" }`} text={"PROJECTS"}/>
+    <PageHeader className={`top-[38px] px-5 ${ isMobile ? "w-full sticky bg-background" : "w-fit" }`} text={"PROJECTS"}/>
     
     { !isMobile ?
       <Carousell prefix="project" width="90%">

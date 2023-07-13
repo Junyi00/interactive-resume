@@ -37,7 +37,7 @@ function App() {
 
   useEffect(() => setIsMobile(windowWidth < MOBILE_WIDTH), [windowWidth]);
 
-  const VerticalLine = () => <div className="h-[5%] w-0 border-l border-[#FFFFFF] gap-1"/>;
+  const VerticalLine = () => <div className="h-[5%] w-0 border-l border-line gap-1"/>;
   const QuickAccessIcons: React.FC<{width: string}> = ({ width }) => <>
     <QuickAccessButton Icon={ResumeIcon} width={width} onClick={() => window.open(ProfileData.resume)}/>
     <QuickAccessButton Icon={GithubIcon} width={width} onClick={() => window.open(ProfileData.links.github)}/>
@@ -49,7 +49,7 @@ function App() {
 
   const PageNavigationButton: React.FC<{text: string, page: number, href: string}> = ({ text, page, href }) => <a 
     href={href}
-    className={`${currentPage === page ? "text-[#438EFF]" : "hover:text-[#FFFFFF] hover:transition-all"}`}
+    className={`${currentPage === page ? "text-primary" : "hover:text-text hover:transition-all"}`}
     onClick={() => setCurrentPage(page)}
   >
     {text}
@@ -65,7 +65,7 @@ function App() {
                       "grid grid-rows-1 grid-cols-[auto_auto_auto] snap-y snap-mandatory" : 
                       "flex flex-col min-h-screen max-h-screen" 
                     } 
-                    overflow-y-auto scroll-smooth bg-[#111111]`}>
+                    overflow-y-auto scroll-smooth bg-background`}>
 
       { !isMobile ?
         <div className="col-start-1 sticky top-0 h-screen w-fit
@@ -73,8 +73,8 @@ function App() {
           <VerticalLine />
           <QuickAccessIcons width="30px"/>
         </div> :
-        <div className="sticky top-0 z-10 w-full h-[38px] flex flex-row justify-between items-center pt-2 px-5 bg-[#111111]">
-          <a href="#landing" className="text-[#FFFFFF] text-[20px] tracking-wider">GJY</a>
+        <div className="sticky top-0 z-10 w-full h-[38px] flex flex-row justify-between items-center pt-2 px-5 bg-background">
+          <a href="#landing" className="text-text text-[20px] tracking-wider">GJY</a>
           <div className="flex flex-row gap-3">
             <QuickAccessIcons width="20px"/>
           </div>

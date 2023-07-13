@@ -23,7 +23,7 @@ const SkillComponent: React.FC<{
       {props.title}
     </p>
     <div className="flex flex-col mb-1 gap-1">
-      <p className="text-[#595959] font-bold">Experienced</p>
+      <p className="text-subtext font-bold">Experienced</p>
       <div className="h-min w-fit flex flex-row flex-wrap gap-2">
         {
           props.experienced.map((tech, index) => <LogoIcon key={index} name={tech} length="30px"/>)
@@ -32,7 +32,7 @@ const SkillComponent: React.FC<{
     </div>
 
     <div className="flex flex-col mb-1 gap-1">
-      <p className="text-[#595959] font-bold">Familiar</p>
+      <p className="text-subtext font-bold">Familiar</p>
       <div className="h-min w-fit flex flex-row flex-wrap gap-2">
         {
           props.familiar.map((tech, index) => <LogoIcon key={index} name={tech} length="30px"/>)
@@ -44,7 +44,7 @@ const SkillComponent: React.FC<{
 
 const SkillsetsBox = ({ skillsets, className, singleColumn }: SkillsetsBoxProps) => {
   return <div className={`${className} grid gap-x-5 ${ singleColumn ? "grid-cols-1" : "grid-cols-2" }
-                           w-fit max-w-full rounded-lg bg-[#222222] py-2 px-4 shadow-sm shadow-gray-300`}>
+                           w-fit max-w-full rounded-lg bg-background-card py-2 px-4 shadow-sm shadow-gray-300`}>
     { Object.keys(skillsets).map((skill, index) => <SkillComponent 
         key={index} 
         title={skill} 

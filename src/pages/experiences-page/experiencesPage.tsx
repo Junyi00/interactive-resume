@@ -12,20 +12,20 @@ interface ExperiencesPageProps {
 }
 
 const EndLine: React.FC<{ className?: string }> = ({ className }) => <div className={`${className} flex flex-row w-full items-center gap-3`}>
-  <div className="border-t-[1px] w-full h-0 border-[#ABABAB] flex-grow"/>
-  <p className="text-[12px] text-[#ABABAB]">END</p>
-  <div className="border-t-[1px] w-full h-0 border-[#ABABAB] flex-grow"/>
+  <div className="border-t-[1px] w-full h-0 border-line flex-grow"/>
+  <p className="text-[12px] text-line">END</p>
+  <div className="border-t-[1px] w-full h-0 border-line flex-grow"/>
 </div>;
 
 const ExperiencesPage = ({ className, isMobile, onHover }: ExperiencesPageProps) => {
   return (
   <div 
     id="experiences" 
-    className={`${className} bg-[#111111] text-[#FFFFFF] ${ !isMobile ? "" : "h-fit"}
+    className={`${className} bg-background text-text ${ !isMobile ? "" : "h-fit"}
                 flex flex-col gap-2 justify-start items-start pt-10`}
     onMouseEnter={onHover}
   >
-    <PageHeader className="top-[38px] px-5 w-full sticky bg-[#111111]" text={"EXPERIENCES"}/>
+    <PageHeader className="top-[38px] px-5 w-full sticky bg-background" text={"EXPERIENCES"}/>
 
     { !isMobile ? 
       <div className={`w-[95%] h-[90%] py-10 px-5
