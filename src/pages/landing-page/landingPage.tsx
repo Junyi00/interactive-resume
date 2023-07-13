@@ -29,7 +29,7 @@ const LandingPage = ({ className, isMobile, onHover }: LandingPageProps) => {
       </div>
 
       <p className={`${ isMobile ? "w-full text-left" : "w-[60%] text-right" } text-[#8c8c8c]`}>
-        I am currently a <HighlightText>Year 2</HighlightText> computer science student in <HighlightText>National University of Singapore</HighlightText>.
+        I am currently a <HighlightText>Year 3</HighlightText> computer science student in <HighlightText>National University of Singapore</HighlightText>.
       </p>
     </div>
 

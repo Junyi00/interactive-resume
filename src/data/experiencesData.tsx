@@ -2,6 +2,28 @@ import { LogoType } from "components/logo-icon/logoIcon";
 
 const ExperiencesData = [
   {
+    title: "NodeFlair",
+    period: "May 2023 - Current",
+    location: "Singapore",
+    role: "Software Engineer Intern",
+    description: [
+      "Built newsletter feature to provide personalized content based on user’s preferences", 
+      "Refactored frontend features to improve search engine optimizations and reduce bounce rate",
+    ],
+    techStack: [LogoType.TypeScript, LogoType.React, LogoType.Rails, LogoType.PostgreSQL],
+  },
+  {
+    title: "Source Academy",
+    period: "August 2022 - Current",
+    location: "Singapore",
+    role: "Software Engineer",
+    description: [
+      "Designed and implemented a notification system while ensuring that extendibility across various notification mediums", 
+      "Revamped background job processing for fault-tolerant execution, job tracking and monitoring",
+    ],
+    techStack: [LogoType.TypeScript, LogoType.Elixir, LogoType.React, LogoType.Ecto, LogoType.PostgreSQL],
+  },
+  {
     title: "Developer Student Club NUS",
     period: "August 2022 - Current",
     location: "Singapore",
@@ -16,7 +38,7 @@ const ExperiencesData = [
     title: "Computing for Volunteer Organisations",
     period: "May 2022 - July 2022",
     location: "Singapore",
-    role: "Full Stack Engineer",
+    role: "Software Engineer Intern",
     description: [
       "Led a team of 3 on the implementation of 2 factor authentication (SingPass, Email) to enhance access control for 2 organisations", 
       "Deployed staging environments with Capistrano, Nginx and GitLab’s CI/CD",

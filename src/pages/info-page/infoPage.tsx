@@ -49,6 +49,7 @@ const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
             </StyledList>
             <StyledList>
               <li>Teaching Assistant for CS1101S (AY2223 Sem 1)</li>
+              <li>Teaching Assistant for CS2100 (AY2223 Sem 2)</li>
             </StyledList>
           </div>
         </div>
@@ -60,6 +61,7 @@ const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
               <li>Goh Chok Tong’s Young Student Leader Award (2018)</li>
               <li>NSF of the Year 2021</li>
               <li>Dean's List (AY21/22 Sem 2)</li>
+              <li>Dean's List (AY22/23 Sem 1)</li>
               <li>Dean's List (AY22/23 Sem 2)</li>
             </StyledList>
           </div>

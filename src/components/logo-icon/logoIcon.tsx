@@ -29,6 +29,8 @@ import {ReactComponent as NginxIcon} from "assets/icons/nginx-icon.svg";
 import {ReactComponent as MySQLIcon} from "assets/icons/mysql-icon.svg"; 
 import {ReactComponent as PandasIcon} from "assets/icons/pandas.svg"
 import {ReactComponent as RecoilIcon} from "assets/icons/recoil.svg";
+import {ReactComponent as ElixirIcon} from "assets/icons/elixir-lang-icon.svg";
+import {ReactComponent as EctoIcon} from "assets/icons/ecto.svg";
 
 export enum LogoType {
   React = "React",
@@ -62,6 +64,8 @@ export enum LogoType {
   MySQL = "MySQL",
   Pandas = "Pandas",
   Recoil = "Recoil",
+  Elixir = "Elixir",
+  Ecto = "Ecto",
 }
 
 const LogoSVG = {
@@ -96,6 +100,8 @@ const LogoSVG = {
   MySQL: MySQLIcon,
   Pandas: PandasIcon,
   Recoil: RecoilIcon,
+  Elixir: ElixirIcon,
+  Ecto: EctoIcon,
 }
 
 const LogoLink = {
@@ -130,6 +136,8 @@ const LogoLink = {
   MySQL: "https://www.mysql.com/",
   Pandas: "https://pandas.pydata.org/",
   Recoil: "https://recoiljs.org/",
+  Elixir: "https://elixir-lang.org/",
+  Ecto: "https://hexdocs.pm/ecto/Ecto.html",
 }
 
 interface LogoIconProps {
