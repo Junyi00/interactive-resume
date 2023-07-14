@@ -70,9 +70,9 @@ const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
     </div>
 
     <div className="w-full h-fot flex justify-center items-center">
-      <div className={`bg-background-card h-fit 
+      <div className={`h-fit 
                       flex flex-col items-center justify-center 
-                      ${!isMobile ? "w-[90%] p-10 m-2 text-[18px] rounded-lg shadow-lg shadow-[#555555]" : "w-full px-2 py-5 text-[18px]"} `}>
+                      ${!isMobile ? "w-[90%] py-16 m-2 text-[18px] border-t border-line" : " bg-background-card w-full px-2 py-5 text-[18px]"} `}>
         <p className="break-normal">Thanks for reading this far!</p>
         <p className="break-normal">Feel free to drop a message to say hello!</p>
         <div className="flex flex-row justify-center items-center gap-5 mt-5">
