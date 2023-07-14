@@ -1,3 +1,5 @@
+import { TypeAnimation } from 'react-type-animation';
+
 import BackgroundImg from 'assets/background_img.png';
 
 interface LandingPageProps {
@@ -19,13 +21,20 @@ const LandingPage = ({ className, isMobile, onHover }: LandingPageProps) => {
   >
     <div className={`flex flex-col ${flexItemAlignment} gap-4`}>
       <div className={`flex flex-col ${flexItemAlignment} w-fit`}>
-        <p className="text-right text-subtext text-[40px] leading-[50px]">Hello there! I am</p>
-
-        <div className="w-fit flex flex-col items-end gap-1">
-          <p className="text-right font-bold text-text text-[40px] leading-[50px] hover:text-[50px] transition-all duration-100 ease-in-out">Goh Jun Yi</p>
-          <HorizontalLine className="w-full"/>
-          <HorizontalLine className="w-[60%]"/>
-        </div>
+        <span className="text-left md:text-right text-subtext text-[35px] leading-[45px]">Hello there! I am</span>
+        <span className="text-left md:text-right font-bold text-text text-[55px] leading-[65px] hover:text-primary transition-all duration-200 ease-in-out">
+          <TypeAnimation
+            sequence={[
+              'Goh Jun Yi',
+              1500,
+              '',
+              500
+            ]}
+            wrapper="span"
+            speed={30}
+            repeat={Infinity}
+          />
+        </span>
       </div>
 
       <p className={`${ isMobile ? "w-full text-left" : "w-[60%] text-right" } text-subtext`}>
