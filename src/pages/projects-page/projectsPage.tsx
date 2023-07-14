@@ -1,6 +1,8 @@
-import Carousell from "components/carousell/carousell";
+import { useEffect, useState } from "react";
+
 import PageHeader from "components/page-header/pageHeader";
 import ProjectEntry from "./projectEntry";
+import ProjectEntryModal from "./projectEntryModal";
 
 import ProjectsData from "data/projectsData";
 
@@ -11,7 +13,10 @@ interface ProjectsPageProps {
 }
 
 const ProjectsPage = ({ className, isMobile, onHover }: ProjectsPageProps) => {
-  const itemsAlignmentCSS = !isMobile ? "justify-center items-center" : "justify-start items-start"
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  const [openCardIndex, setOpenCardIndex] = useState<number>(0);
+
+  const itemsAlignmentCSS = !isMobile ? "justify-start items-center" : "justify-start items-start"
 
   return <div 
     id="projects" 
@@ -21,18 +26,26 @@ const ProjectsPage = ({ className, isMobile, onHover }: ProjectsPageProps) => {
   >
     <PageHeader className={`top-[38px] px-5 ${ isMobile ? "w-full sticky bg-background" : "w-fit" }`} text={"PROJECTS"}/>
     
-    { !isMobile ?
-      <Carousell prefix="project" width="90%">
-        {
-          ProjectsData.map((project, index) => <ProjectEntry id={`project_${index}`} key={index} isMobile={isMobile} {...project} />)
-        }
-      </Carousell> :
-      <>
-        {
-          ProjectsData.map((project, index) => <ProjectEntry className="mx-5 mb-3" key={index} isMobile={isMobile} {...project} />)
-        }
-      </>
-    }
+    <div className="px-5 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
+      {
+        ProjectsData.map((project, index) => (
+          <ProjectEntry 
+            id={`project_${index}`} 
+            key={index} 
+            isMobile={isMobile} 
+            isOpen={openCardIndex === index} 
+            onClick={() => { setOpenCardIndex(index); setIsOpenModal(true); }}
+            projectData={project} 
+          />
+        ))
+      }
+    </div>
+
+    <ProjectEntryModal 
+      isOpen={isOpenModal} 
+      onClose={() => { setIsOpenModal(false); }} 
+      projectData={ProjectsData[openCardIndex]} 
+    />
   </div> 
 };
 
