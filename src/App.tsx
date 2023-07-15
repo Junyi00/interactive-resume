@@ -22,6 +22,11 @@ const PAGE_IDS: { [key: number]: string } = {
 
 function App() {
   const [currentPage, setCurrentPage] = useState<number>(0);
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
+    setScrollTop(event.currentTarget.scrollTop);
+  };
 
   const VerticalLine = () => <div className="h-[5%] w-0 border-l border-line gap-1"/>;
   const QuickAccessIcons: React.FC<{width: string}> = ({ width }) => <>
@@ -46,10 +51,13 @@ function App() {
   };
 
   return (
-    <div className="h-screen w-screen max-w-screen
-                    md:grid md:grid-rows-1 md:grid-cols-[auto_auto_auto] md:snap-y md:snap-mandatory
-                    flex flex-col min-h-screen max-h-screen
-                    overflow-y-auto scroll-smooth bg-background">
+    <div 
+      className="h-screen w-screen max-w-screen
+                 md:grid md:grid-rows-1 md:grid-cols-[auto_auto_auto] md:snap-y md:snap-mandatory
+                 flex flex-col min-h-screen max-h-screen
+                 overflow-y-auto scroll-smooth bg-background"
+      onScroll={handleScroll}
+    >
 
       <div className="hidden md:flex col-start-1 sticky top-0 h-screen w-fit
                       flex-col gap-5 justify-start items-center pl-5">
@@ -64,7 +72,7 @@ function App() {
       </div>
 
       <div className="w-screen h-full md:w-auto md:h-screen md:col-start-2">
-        <LandingPage className={ContentPageCSS} onHover={onPageHover(0)}/>
+        <LandingPage className={ContentPageCSS} scrollTop={scrollTop} onHover={onPageHover(0)}/>
         <ExperiencesPage className={ContentPageCSS} onHover={onPageHover(1)}/>
         <ProjectsPage className={ContentPageCSS} onHover={onPageHover(2)}/>
         <InfoPage className={ContentPageCSS} onHover={onPageHover(3)}/>

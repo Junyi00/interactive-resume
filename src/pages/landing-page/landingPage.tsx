@@ -4,12 +4,14 @@ import BackgroundImage from 'components/background-image/backgroundImage';
 
 interface LandingPageProps {
   className: string;
+  scrollTop: number;
   onHover: () => void;
 }
 
 const HighlightText: React.FC<{children: React.ReactNode}> = ({ children }) => <span className="text-primary">{children}</span>;
 
-const LandingPage = ({ className, onHover }: LandingPageProps) => {
+const LandingPage = ({ className, scrollTop, onHover }: LandingPageProps) => {
+
   return <div 
     id="landing"
     className={`${className} bg-background text-text p-5 grid grid-cols-1 md:grid-cols-2 gap-2 items-center justify-center`}
@@ -38,7 +40,7 @@ const LandingPage = ({ className, onHover }: LandingPageProps) => {
       </p>
     </div>
 
-    <BackgroundImage className="max-w-[500px] hidden md:block" />
+    <BackgroundImage translateY={scrollTop} className="max-w-[500px] hidden md:block" />
   </div>;
 };
 
