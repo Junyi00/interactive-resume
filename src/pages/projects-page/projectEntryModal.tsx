@@ -88,7 +88,10 @@ const ProjectEntryModal = ({
               </div>
 
               <div className="flex items-center justify-end">
-                <button className="py-1 px-2 rounded border border-primary text-primary hover:text-white hover:bg-primary transition" onClick={onClose}>Close</button>
+                <button 
+                  className="py-1 px-2 rounded border border-primary text-primary hover:text-white hover:bg-primary focus:text-white focus:bg-primary focus:outline-none transition ease-in-out" 
+                  onClick={onClose}
+                >Close</button>
               </div>
             </Dialog.Panel>
           </div>

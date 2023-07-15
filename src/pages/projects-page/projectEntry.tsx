@@ -54,14 +54,15 @@ const ProjectEntry = ({
     >
       <div 
         style={{ backgroundColor: bgColor }} 
-        className="col-span-1 h-[200px] flex p-2 gap-10 items-center justify-center rounded transition-all ease-in-out"
+        className="col-span-1 h-[200px] flex gap-10 items-center justify-center rounded transition-all ease-in-out 
+                   object-cover overflow-hidden shadow-sm shadow-gray-300"
       >
-        <img alt={name + "_image"} src={image} />
+        <img className="" alt={name + "_image"} src={image} />
       </div>
       <h3 className="md:hidden text-[20px] font-semibold tracking-wider text-text col-span-3 transition-all ease-in-out">
         {expanded ? name.toUpperCase() : shortName.toUpperCase()}
       </h3>
-      <h3 className="hidden md:block text-[20px] font-semibold text-text col-span-3">
+      <h3 className="hidden md:block text-[20px] font-semibold text-text col-span-3 transition-all ease-in-out">
         {shortName.toUpperCase()}
       </h3>
       <div className={`md:hidden w-full flex flex-col gap-2 h-fit max-h-0 overflow-hidden transition-all duration-500 ${expanded ? "max-h-[10000px] overflow-visible ease-in" : "ease-out"}`}>
