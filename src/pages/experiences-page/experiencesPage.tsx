@@ -3,8 +3,6 @@ import ExperienceEntry from "./experienceEntry";
 
 import ExperiencesData from "data/experiencesData";
 
-import "./experiencePage.css";
-
 interface ExperiencesPageProps {
   className: string;
   isMobile: boolean;
@@ -19,33 +17,21 @@ const EndLine: React.FC<{ className?: string }> = ({ className }) => <div classN
 
 const ExperiencesPage = ({ className, isMobile, onHover }: ExperiencesPageProps) => {
   return (
-  <div 
-    id="experiences" 
-    className={`${className} bg-background text-text ${ !isMobile ? "" : "h-fit"}
-                flex flex-col gap-2 justify-start items-start`}
-    onMouseEnter={onHover}
-  >
-    <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 w-full bg-background" text={"EXPERIENCES"}/>
+    <div 
+      id="experiences" 
+      className={`${className} bg-background text-text flex flex-col gap-2 justify-start items-start`}
+      onMouseEnter={onHover}
+    >
+      <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 w-full bg-background" text={"EXPERIENCES"}/>
 
-    { !isMobile ? 
-      <div className={`w-[95%] h-[90%] py-10 px-5
-        flex flex-col gap-3 justify-start items-start 
-        overflow-y-scroll scrollable`
-      }>
+      <div className="px-5 flex flex-col gap-3 justify-start items-start">
         {
           ExperiencesData.map((experience, index) => <ExperienceEntry key={index} isMobile={isMobile} {...experience} />)
         }
         <EndLine />
-      </div> :
-      <>
-        {
-          ExperiencesData.map((experience, index) => <ExperienceEntry className="px-5" key={index} isMobile={isMobile} {...experience} />)
-        }
-        <EndLine className="px-5" />
-      </>
-    }
-    
-  </div>);
+      </div> 
+    </div>
+  );
 };
 
 export default ExperiencesPage;
