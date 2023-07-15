@@ -24,7 +24,7 @@ import {ReactComponent as DashIcon} from "assets/icons/dash_plotly.svg";
 import {ReactComponent as FlaskIcon} from "assets/icons/flask-icon.svg";
 import {ReactComponent as DjangoIcon} from "assets/icons/django-logo-negative.svg";
 import {ReactComponent as MangoDBIcon} from "assets/icons/mongodb.svg";
-import {ReactComponent as Neo4JIcon} from "assets/icons/neo4j-icon-white.svg"; 
+import {ReactComponent as Neo4JIcon} from "assets/icons/neo4j-icon-colored.svg"; 
 import {ReactComponent as NginxIcon} from "assets/icons/nginx-icon.svg"; 
 import {ReactComponent as MySQLIcon} from "assets/icons/mysql-icon.svg"; 
 import {ReactComponent as PandasIcon} from "assets/icons/pandas.svg"
