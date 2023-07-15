@@ -1,11 +1,11 @@
 import PageHeader from "components/page-header/pageHeader";
 import QuickAccessButton from "components/quick-access-button/quickAccessButton";
+import SkillsetsBox from "components/skillsets-box/skillsetsBox";
 
 import {ReactComponent as ResumeIcon} from 'assets/icons/resume.svg';
 import {ReactComponent as GithubIcon} from 'assets/icons/github.svg';
 import {ReactComponent as LinkedinIcon} from 'assets/icons/linkedin.svg';
 import {ReactComponent as EmailIcon} from 'assets/icons/email.svg';
-import SkillsetsBox from "components/skillsets-box/skillsetsBox";
 
 import ProfileData from 'data/profileData';
 import SkillsetsData from "data/skillsetsData";

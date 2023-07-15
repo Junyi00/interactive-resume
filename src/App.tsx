@@ -4,12 +4,12 @@ import ExperiencesPage from 'pages/experiences-page/experiencesPage';
 import ProjectsPage from 'pages/projects-page/projectsPage';
 import InfoPage from 'pages/info-page/infoPage';
 import BackgroundImage from 'components/background-image/backgroundImage';
+import QuickAccessButton from 'components/quick-access-button/quickAccessButton';
 
 import {ReactComponent as ResumeIcon} from 'assets/icons/resume.svg';
 import {ReactComponent as GithubIcon} from 'assets/icons/github.svg';
 import {ReactComponent as LinkedinIcon} from 'assets/icons/linkedin.svg';
 import {ReactComponent as EmailIcon} from 'assets/icons/email.svg';
-import QuickAccessButton from 'components/quick-access-button/quickAccessButton';
 
 import ProfileData from 'data/profileData';
 
