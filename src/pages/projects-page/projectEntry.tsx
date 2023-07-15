@@ -48,7 +48,7 @@ const ProjectEntry = ({
     <div 
       id={id} 
       className={`${className} col-span-1 gap-1 h-fit rounded-lg flex flex-col bg-transparent 
-                  hover:[&>*:first-child]:drop-shadow-md hover:[&>*:first-child]:-translate-y-2 [&>h3]:hover:text-primary cursor-pointer`}
+                  hover:[&>*:first-child]:drop-shadow-md hover:[&>*:first-child]:-translate-y-1 [&>h3]:hover:text-primary cursor-pointer`}
       onClick={handleOnClick}
       onKeyDown={handleOnClick}
     >
