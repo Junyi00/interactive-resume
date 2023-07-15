@@ -57,8 +57,11 @@ const ProjectEntry = ({
       >
         <img alt={name + "_image"} src={image} />
       </div>
-      <p className="text-[20px] font-bold tracking-wider text-text col-span-3">
+      <p className="md:hidden text-[20px] font-bold tracking-wider text-text col-span-3">
         {expanded ? name.toUpperCase() : shortName.toUpperCase()}
+      </p>
+      <p className="hidden md:block text-[20px] font-bold tracking-wider text-text col-span-3">
+        {shortName.toUpperCase()}
       </p>
       <div className={`md:hidden w-full flex flex-col gap-2 h-fit max-h-0 overflow-hidden transition-all duration-500 ease-in-out ${expanded ? "max-h-[10000px] overflow-visible" : ""}`}>
         <div className="flex flex-col">
