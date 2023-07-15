@@ -49,7 +49,7 @@ function App() {
 
   const PageNavigationButton: React.FC<{text: string, page: number, href: string}> = ({ text, page, href }) => <a 
     href={href}
-    className={`${currentPage === page ? "text-primary" : "hover:text-text hover:transition-all"}`}
+    className={`transition-all ${currentPage === page ? "text-primary font-semibold" : "hover:font-semibold"}`}
     onClick={() => setCurrentPage(page)}
   >
     {text}
@@ -92,7 +92,7 @@ function App() {
       </div>
       
       { !isMobile &&
-        <div className="col-start-3 sticky top-0 h-screen w-fit flex flex-col gap-2 justify-end items-end pr-5 text-[#595959]">
+        <div className="col-start-3 sticky top-0 h-screen w-fit flex flex-col gap-2 justify-end items-end pr-5 text-icon">
           <PageNavigationButton href={`#${PAGE_IDS[0]}`} page={0} text="Welcome"/>
           <PageNavigationButton href={`#${PAGE_IDS[1]}`} page={1} text="Experiences"/>
           <PageNavigationButton href={`#${PAGE_IDS[2]}`} page={2} text="Projects"/>
