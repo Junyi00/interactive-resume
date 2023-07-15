@@ -47,13 +47,14 @@ const ProjectEntry = ({
   return (
     <div 
       id={id} 
-      className={`${className} col-span-1 gap-1 h-fit rounded-lg flex flex-col bg-transparent transition-all ease-in-out`}
+      className={`${className} col-span-1 gap-1 h-fit rounded-lg flex flex-col bg-transparent 
+                  hover:[&>*:first-child]:drop-shadow-md hover:[&>*:first-child]:-translate-y-2 cursor-pointer`}
       onClick={handleOnClick}
       onKeyDown={handleOnClick}
     >
       <div 
         style={{ backgroundColor: bgColor }} 
-        className="col-span-1 h-[200px] flex p-2 gap-10 items-center justify-center rounded"
+        className="col-span-1 h-[200px] flex p-2 gap-10 items-center justify-center rounded transition-all ease-in-out"
       >
         <img alt={name + "_image"} src={image} />
       </div>
@@ -63,7 +64,7 @@ const ProjectEntry = ({
       <p className="hidden md:block text-[20px] font-bold tracking-wider text-text col-span-3">
         {shortName.toUpperCase()}
       </p>
-      <div className={`md:hidden w-full flex flex-col gap-2 h-fit max-h-0 overflow-hidden transition-all duration-500 ease-in-out ${expanded ? "max-h-[10000px] overflow-visible" : ""}`}>
+      <div className={`md:hidden w-full flex flex-col gap-2 h-fit max-h-0 overflow-hidden transition-all duration-500 ${expanded ? "max-h-[10000px] overflow-visible ease-in" : "ease-out"}`}>
         <div className="flex flex-col">
           <p className="text-[15px] font-bold text-primary">{date}</p>
         </div>
