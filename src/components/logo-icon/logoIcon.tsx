@@ -29,7 +29,7 @@ import {ReactComponent as NginxIcon} from "assets/icons/nginx-icon.svg";
 import {ReactComponent as MySQLIcon} from "assets/icons/mysql-icon.svg"; 
 import {ReactComponent as PandasIcon} from "assets/icons/pandas.svg"
 import {ReactComponent as RecoilIcon} from "assets/icons/recoil.svg";
-import {ReactComponent as ElixirIcon} from "assets/icons/elixir-lang-icon.svg";
+import ElixirIcon from "assets/icons/elixir-lang-icon.png";
 import {ReactComponent as EctoIcon} from "assets/icons/ecto.svg";
 
 export enum LogoType {
@@ -100,7 +100,7 @@ const LogoSVG = {
   MySQL: MySQLIcon,
   Pandas: PandasIcon,
   Recoil: RecoilIcon,
-  Elixir: ElixirIcon,
+  Elixir: ({width, height}: {width?: string; height?: string;}) => <img src={ElixirIcon} width={width} height={height} alt=""/>,
   Ecto: EctoIcon,
 }
 
