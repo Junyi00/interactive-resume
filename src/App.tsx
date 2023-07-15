@@ -3,8 +3,8 @@ import LandingPage from 'pages/landing-page/landingPage';
 import ExperiencesPage from 'pages/experiences-page/experiencesPage';
 import ProjectsPage from 'pages/projects-page/projectsPage';
 import InfoPage from 'pages/info-page/infoPage';
+import BackgroundImage from 'components/background-image/backgroundImage';
 
-import BackgroundImg from 'assets/background_img.png';
 import {ReactComponent as ResumeIcon} from 'assets/icons/resume.svg';
 import {ReactComponent as GithubIcon} from 'assets/icons/github.svg';
 import {ReactComponent as LinkedinIcon} from 'assets/icons/linkedin.svg';
@@ -102,7 +102,7 @@ function App() {
       }
 
       { isMobile && 
-          <img className="fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-10 pointer-events-none" alt="background" src={BackgroundImg} width="100%"/>
+        <BackgroundImage className="w-full fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-10 pointer-events-none" />
       }
     </div>
   );

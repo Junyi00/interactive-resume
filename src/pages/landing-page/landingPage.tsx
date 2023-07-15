@@ -1,6 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 
-import BackgroundImg from 'assets/background_img.png';
+import BackgroundImage from 'components/background-image/backgroundImage';
 
 interface LandingPageProps {
   className: string;
@@ -11,16 +11,14 @@ interface LandingPageProps {
 const HighlightText: React.FC<{children: React.ReactNode}> = ({ children }) => <span className="text-primary">{children}</span>;
 const HorizontalLine: React.FC<{className: string}> = ({ className }) => <div className={`${className} border-t border-primary`}/>
 
-const LandingPage = ({ className, isMobile, onHover }: LandingPageProps) => {
-  const flexItemAlignment = isMobile ? "items-start" : "items-end";
-
+const LandingPage = ({ className, onHover }: LandingPageProps) => {
   return <div 
-    id="landing" 
-    className={`${className} bg-background text-text p-5 flex ${ isMobile ? "flex-col-reverse" : "flex-row" } gap-2 items-center justify-center`}
+    id="landing"
+    className={`${className} bg-background text-text p-5 grid grid-cols-1 md:grid-cols-2 gap-2 items-center justify-center`}
     onMouseEnter={onHover}
   >
-    <div className={`flex flex-col ${flexItemAlignment} gap-4`}>
-      <div className={`flex flex-col ${flexItemAlignment} w-fit`}>
+    <div className="flex flex-col items-start md:items-end gap-4">
+      <div className="flex flex-col items-start md:items-end w-fit">
         <span className="text-left md:text-right text-subtext text-[35px] leading-[45px]">Hello there! I am</span>
         <span className="text-left md:text-right font-bold text-text text-[55px] leading-[65px] hover:text-primary transition-all duration-200 ease-in-out">
           <TypeAnimation
@@ -37,12 +35,12 @@ const LandingPage = ({ className, isMobile, onHover }: LandingPageProps) => {
         </span>
       </div>
 
-      <p className={`${ isMobile ? "w-full text-left" : "w-[60%] text-right" } text-subtext`}>
+      <p className="w-full text-left md:w-2/3 md:text-right text-subtext">
         I am currently a <HighlightText>Year 3</HighlightText> computer science student in <HighlightText>National University of Singapore</HighlightText>.
       </p>
     </div>
 
-    <img className={ isMobile ? "fixed opacity-10 hidden" : "hover:w-[45%] transition-all duration-100 ease-in-out" } alt="background" src={BackgroundImg} width={isMobile ? "100%" : "40%"}/>
+    <BackgroundImage className="max-w-[500px] hidden md:block" />
   </div>;
 };
 
