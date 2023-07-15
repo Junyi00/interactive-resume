@@ -59,10 +59,10 @@ const ProjectEntry = ({
       >
         <img className="" alt={name + "_image"} src={image} />
       </div>
-      <h3 className="md:hidden text-[20px] font-semibold tracking-wider text-text col-span-3 transition-all ease-in-out">
+      <h3 className="md:hidden text-[18px] md:text-[20px] font-semibold tracking-wider text-text col-span-3 transition-all ease-in-out">
         {expanded ? name.toUpperCase() : shortName.toUpperCase()}
       </h3>
-      <h3 className="hidden md:block text-[20px] font-semibold text-text col-span-3 transition-all ease-in-out">
+      <h3 className="hidden md:block text-[18px] md:text-[20px] font-semibold text-text col-span-3 transition-all ease-in-out">
         {shortName.toUpperCase()}
       </h3>
       <div className={`md:hidden w-full flex flex-col gap-2 h-fit max-h-0 overflow-hidden transition-all duration-500 ${expanded ? "max-h-[10000px] overflow-visible ease-in" : "ease-out"}`}>
