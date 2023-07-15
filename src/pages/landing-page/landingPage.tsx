@@ -36,7 +36,7 @@ const LandingPage = ({ className, scrollTop, onHover }: LandingPageProps) => {
       </div>
 
       <p className="w-full text-left md:w-2/3 md:text-right text-subtext">
-        I am currently a <HighlightText>Year 3</HighlightText> computer science student in <HighlightText>National University of Singapore</HighlightText>.
+        I am currently a <HighlightText>penultimate</HighlightText> computer science student in <HighlightText>National University of Singapore</HighlightText>.
       </p>
     </div>
 
