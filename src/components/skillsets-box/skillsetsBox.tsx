@@ -19,7 +19,7 @@ const SkillComponent: React.FC<{
   singleColumn?: boolean
 }> = (props) => {
   return <>  
-    <p className={`${ !props.singleColumn ? "col-span-2" : "" } font-bold font-[18px]`}>
+    <p className={`${ !props.singleColumn ? "col-span-2" : "" } font-bold text-[18px]`}>
       {props.title}
     </p>
     <div className="flex flex-col mb-1 gap-1">
