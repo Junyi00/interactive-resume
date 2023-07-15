@@ -32,6 +32,7 @@ import {ReactComponent as RecoilIcon} from "assets/icons/recoil.svg";
 import ElixirIcon from "assets/icons/elixir-lang-icon.png";
 import {ReactComponent as EctoIcon} from "assets/icons/ecto.svg";
 import {ReactComponent as ElasticsearchIcon} from "assets/icons/elasticsearch.svg";
+import {ReactComponent as SeleniumIcon} from "assets/icons/selenium.svg";
 
 export enum LogoType {
   React = "React",
@@ -67,7 +68,8 @@ export enum LogoType {
   Recoil = "Recoil",
   Elixir = "Elixir",
   Ecto = "Ecto",
-  Elasticsearch = "Elasticsearch"
+  Elasticsearch = "Elasticsearch",
+  Selenium = "Selenium",
 }
 
 const LogoSVG = {
@@ -104,7 +106,8 @@ const LogoSVG = {
   Recoil: RecoilIcon,
   Elixir: ({width, height}: {width?: string; height?: string;}) => <img src={ElixirIcon} width={width} height={height} alt=""/>,
   Ecto: EctoIcon,
-  Elasticsearch: ElasticsearchIcon
+  Elasticsearch: ElasticsearchIcon,
+  Selenium: SeleniumIcon,
 }
 
 const LogoLink = {
@@ -142,6 +145,7 @@ const LogoLink = {
   Elixir: "https://elixir-lang.org/",
   Ecto: "https://hexdocs.pm/ecto/Ecto.html",
   Elasticsearch: "https://www.elastic.co/",
+  Selenium: "https://www.selenium.dev/",
 }
 
 interface LogoIconProps {

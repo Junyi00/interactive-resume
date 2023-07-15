@@ -15,7 +15,7 @@ const SkillsetsData: Skillsets = {
     familiar: [LogoType.MongoDB, LogoType.Django, LogoType.Neo4J, LogoType.Elasticsearch],
   },
   Others: {
-    experienced: [LogoType.Git, LogoType.Docker, LogoType.TensorFlow, LogoType.PyTorch],
+    experienced: [LogoType.Git, LogoType.Docker, LogoType.Selenium, LogoType.TensorFlow, LogoType.PyTorch],
     familiar: [LogoType.Nginx]
   }
 };
