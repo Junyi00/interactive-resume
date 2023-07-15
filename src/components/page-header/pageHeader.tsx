@@ -4,9 +4,9 @@ interface PageHeaderProps {
 }
 
 const PageHeader = ({ className, text }: PageHeaderProps) => {
-  return <p className={`${className} text-[30px] font-bold tracking-wider`}>
+  return <h2 className={`${className} text-[30px] leading-[40px] font-bold tracking-wider`}>
     {text}
-  </p>;
+  </h2>;
 };
 
 export default PageHeader;

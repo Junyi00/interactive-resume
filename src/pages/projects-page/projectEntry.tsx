@@ -48,7 +48,7 @@ const ProjectEntry = ({
     <div 
       id={id} 
       className={`${className} col-span-1 gap-1 h-fit rounded-lg flex flex-col bg-transparent 
-                  hover:[&>*:first-child]:drop-shadow-md hover:[&>*:first-child]:-translate-y-2 cursor-pointer`}
+                  hover:[&>*:first-child]:drop-shadow-md hover:[&>*:first-child]:-translate-y-2 [&>h3]:hover:text-primary cursor-pointer`}
       onClick={handleOnClick}
       onKeyDown={handleOnClick}
     >
@@ -58,12 +58,12 @@ const ProjectEntry = ({
       >
         <img alt={name + "_image"} src={image} />
       </div>
-      <p className="md:hidden text-[20px] font-bold tracking-wider text-text col-span-3">
+      <h3 className="md:hidden text-[20px] font-bold tracking-wider text-text col-span-3 transition-all ease-in-out">
         {expanded ? name.toUpperCase() : shortName.toUpperCase()}
-      </p>
-      <p className="hidden md:block text-[20px] font-bold tracking-wider text-text col-span-3">
+      </h3>
+      <h3 className="hidden md:block text-[20px] font-bold tracking-wider text-text col-span-3">
         {shortName.toUpperCase()}
-      </p>
+      </h3>
       <div className={`md:hidden w-full flex flex-col gap-2 h-fit max-h-0 overflow-hidden transition-all duration-500 ${expanded ? "max-h-[10000px] overflow-visible ease-in" : "ease-out"}`}>
         <div className="flex flex-col">
           <p className="text-[15px] font-bold text-primary">{date}</p>

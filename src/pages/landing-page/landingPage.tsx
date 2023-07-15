@@ -20,7 +20,7 @@ const LandingPage = ({ className, scrollTop, onHover }: LandingPageProps) => {
     <div className="flex flex-col items-start md:items-end gap-4">
       <div className="flex flex-col items-start md:items-end w-fit">
         <span className="text-left md:text-right text-subtext text-[35px] leading-[45px]">Hello there! I am</span>
-        <span className="text-left md:text-right font-bold text-text text-[55px] leading-[65px] hover:text-primary transition-all duration-200 ease-in-out">
+        <h1 className="text-left md:text-right font-bold text-text text-[55px] leading-[65px] hover:text-primary transition-all duration-200 ease-in-out">
           <TypeAnimation
             sequence={[
               'Goh Jun Yi',
@@ -32,7 +32,7 @@ const LandingPage = ({ className, scrollTop, onHover }: LandingPageProps) => {
             speed={30}
             repeat={Infinity}
           />
-        </span>
+        </h1>
       </div>
 
       <p className="w-full text-left md:w-2/3 md:text-right text-subtext">
