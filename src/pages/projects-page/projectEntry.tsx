@@ -11,7 +11,6 @@ interface ProjectEntryProps {
   className?: string;
   id?: string;
   projectData: ProjectType;
-  isMobile: boolean;
   isOpen?: boolean;
   onClick: () => void;
 }

@@ -4,12 +4,10 @@ import BackgroundImage from 'components/background-image/backgroundImage';
 
 interface LandingPageProps {
   className: string;
-  isMobile: boolean;
   onHover: () => void;
 }
 
 const HighlightText: React.FC<{children: React.ReactNode}> = ({ children }) => <span className="text-primary">{children}</span>;
-const HorizontalLine: React.FC<{className: string}> = ({ className }) => <div className={`${className} border-t border-primary`}/>
 
 const LandingPage = ({ className, onHover }: LandingPageProps) => {
   return <div 

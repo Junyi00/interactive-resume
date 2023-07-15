@@ -5,7 +5,6 @@ import ExperiencesData from "data/experiencesData";
 
 interface ExperiencesPageProps {
   className: string;
-  isMobile: boolean;
   onHover: () => void;
 }
 
@@ -15,7 +14,7 @@ const EndLine: React.FC<{ className?: string }> = ({ className }) => <div classN
   <div className="border-t-[1px] w-full h-0 border-line flex-grow"/>
 </div>;
 
-const ExperiencesPage = ({ className, isMobile, onHover }: ExperiencesPageProps) => {
+const ExperiencesPage = ({ className, onHover }: ExperiencesPageProps) => {
   return (
     <div 
       id="experiences" 
@@ -26,7 +25,7 @@ const ExperiencesPage = ({ className, isMobile, onHover }: ExperiencesPageProps)
 
       <div className="px-5 flex flex-col gap-3 justify-start items-start">
         {
-          ExperiencesData.map((experience, index) => <ExperienceEntry key={index} isMobile={isMobile} {...experience} />)
+          ExperiencesData.map((experience, index) => <ExperienceEntry key={index} {...experience} />)
         }
         <EndLine />
       </div> 

@@ -12,7 +12,6 @@ import SkillsetsData from "data/skillsetsData";
 
 interface InfoPageProps {
   className: string;
-  isMobile: boolean;
   onHover: () => void;
 }
 
@@ -22,24 +21,24 @@ const StyledList: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   </ul>
 );
 
-const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
+const InfoPage = ({ className, onHover }: InfoPageProps) => {
   const iconLength = "30px";
 
   return <div 
     id="info" 
     onMouseEnter={onHover}
-    className={`${className} text-text w-full ${isMobile ? "h-fit" : "h-screen"}
+    className={`${className} text-text w-full h-fit
                 flex flex-col gap-5 justify-between pt-10`}
   >
-    <div className={`flex flex-row ${isMobile ? "flex-wrap" : "justify-evenly"} gap-5 w-full`}> 
-      <div className={`flex flex-col gap-1 ${isMobile ? "w-full" : ""}`}>
-        <PageHeader className={`${isMobile ? `sticky top-[38px] w-full bg-background` : ""} px-5`} text={"SKILLSETS"}/>
+    <div className="w-full flex flex-row flex-wrap md:justify-evenly gap-5"> 
+      <div className="flex flex-col gap-1 w-full md:w-fit">
+        <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 w-full bg-background" text={"SKILLSETS"}/>
         <div className="w-full h-fit px-5"><SkillsetsBox skillsets={SkillsetsData} singleColumn={false}/></div>
       </div>
 
-      <div className={`flex flex-col ${!isMobile ? "justify-center" : ""} gap-5`}>
+      <div className="flex flex-col justiy-start gap-5">
         <div className="flex flex-col gap-1">
-          <PageHeader className={`${isMobile ? `sticky top-[38px] w-full bg-background` : ""} px-5`} text={"EDUCATION"}/>
+          <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 w-full bg-background" text={"EDUCATION"}/>
           <div className="px-5">
             <p className="text-[25px] leading-[30px] text-primary">National University of Singapore</p>
             <p className="text-[15px] text-subtext font-bold">August 2021 - Current</p>
@@ -55,7 +54,7 @@ const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
         </div>
 
         <div className="flex flex-col gap-1">
-          <PageHeader className={`${isMobile ? `sticky top-[38px] w-full bg-background` : ""} px-5`} text={"ACHIEVEMENTS"}/>
+          <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 w-full bg-background" text={"ACHIEVEMENTS"}/>
           <div className="px-5">
             <StyledList>
               <li>Goh Chok Tong’s Young Student Leader Award (2018)</li>
@@ -70,9 +69,9 @@ const InfoPage = ({ className, isMobile, onHover }: InfoPageProps) => {
     </div>
 
     <div className="w-full h-fot flex justify-center items-center">
-      <div className={`h-fit 
+      <div className="h-fit w-full bg-background-card md:bg-transparent md:border-t md:border-line 
                       flex flex-col items-center justify-center 
-                      ${!isMobile ? "w-[90%] py-16 m-2 text-[18px] border-t border-line" : " bg-background-card w-full px-2 py-5 text-[18px]"} `}>
+                      md:w-[90%] px-4 py-5 md:px-0 md:py-16 md:m-2 text-[18px] text-center">
         <p className="break-normal">Thanks for reading this far!</p>
         <p className="break-normal">Feel free to drop a message to say hello!</p>
         <div className="flex flex-row justify-center items-center gap-5 mt-5">
