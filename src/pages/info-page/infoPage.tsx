@@ -37,10 +37,10 @@ const InfoPage = ({ className, onHover }: InfoPageProps) => {
       </div>
 
       <div className="flex flex-row flex-wrap gap-5 justify-start">
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-5">
           <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 md:px-10 w-full bg-background" text="EDUCATION" />
           <div className="px-5 md:px-10">
-            <p className="text-[25px] leading-[30px] text-primary">National University of Singapore</p>
+            <p className="text-[25px] leading-[30px] text-primary font-semibold">National University of Singapore</p>
             <p className="text-[15px] text-subtext font-bold">August 2021 - Current</p>
             <StyledList>
               <li>Computing for Voluntary Welfare Organisations (May 2022)</li>

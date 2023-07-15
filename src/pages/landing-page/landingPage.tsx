@@ -24,7 +24,7 @@ const LandingPage = ({ className, scrollTop, onHover }: LandingPageProps) => {
           <TypeAnimation
             sequence={[
               'Goh Jun Yi',
-              1500,
+              2000,
               '',
               500
             ]}

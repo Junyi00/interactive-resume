@@ -36,7 +36,7 @@ function App() {
     <QuickAccessButton Icon={EmailIcon} width={width} onClick={() => window.open(`mailto:${ProfileData.email}`)}/>
   </>;
 
-  const ContentPageCSS = "min-w-[100%] w-screen md:w-full h-fit min-h-full pt-5";
+  const ContentPageCSS = "min-w-[100%] w-screen md:w-full h-fit min-h-full py-5 last:pb-0";
 
   const PageNavigationButton: React.FC<{text: string, page: number, href: string}> = ({ text, page, href }) => <a 
     href={href}
