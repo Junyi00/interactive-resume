@@ -32,12 +32,12 @@ const InfoPage = ({ className, onHover }: InfoPageProps) => {
   >
     <div className="w-full flex flex-col gap-10"> 
       <div className="flex flex-col gap-1 w-full md:w-full">
-        <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 w-full bg-background" text={"SKILLSETS"}/>
+        <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 mb-2 w-full bg-background" text="SKILLSETS" isMainHeader />
         <div className="w-full h-fit px-5"><SkillsetsBox skillsets={SkillsetsData} singleColumn={false}/></div>
       </div>
 
       <div className="flex flex-col gap-1">
-        <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 w-full bg-background" text={"EDUCATION"}/>
+        <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 w-full bg-background" text="EDUCATION" />
         <div className="px-5">
           <p className="text-[25px] leading-[30px] text-primary">National University of Singapore</p>
           <p className="text-[15px] text-subtext font-bold">August 2021 - Current</p>
@@ -52,8 +52,8 @@ const InfoPage = ({ className, onHover }: InfoPageProps) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-1">
-        <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 w-full bg-background" text={"ACHIEVEMENTS"}/>
+      <div className="flex flex-col">
+        <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 mb-2 w-full bg-background" text="ACHIEVEMENTS" />
         <div className="px-5">
           <StyledList>
             <li>Goh Chok Tong’s Young Student Leader Award (2018)</li>
@@ -66,18 +66,16 @@ const InfoPage = ({ className, onHover }: InfoPageProps) => {
       </div>
     </div>
 
-    <div className="w-full h-fot flex justify-center items-center">
-      <div className="h-fit w-full bg-background-card md:bg-transparent md:border-t md:border-line 
-                      flex flex-col items-center justify-center 
-                      md:w-[90%] px-4 py-5 md:px-0 md:py-16 md:m-2 text-[18px] text-center">
-        <p className="break-normal">Thanks for reading this far!</p>
-        <p className="break-normal">Feel free to drop a message to say hello!</p>
-        <div className="flex flex-row justify-center items-center gap-5 mt-5">
-          <QuickAccessButton Icon={ResumeIcon} width={iconLength} onClick={() => window.open(ProfileData.resume)}/>
-          <QuickAccessButton Icon={GithubIcon} width={iconLength} onClick={() => window.open(ProfileData.links.github)}/>
-          <QuickAccessButton Icon={LinkedinIcon} width={iconLength} onClick={() => window.open(ProfileData.links.linkedin)}/>
-          <QuickAccessButton Icon={EmailIcon} width={iconLength} onClick={() => window.open(`mailto:${ProfileData.email}`)}/>
-        </div>
+    <div className="h-fit w-full bg-background-card md:bg-transparent md:border-t md:border-line 
+                    flex flex-col items-center justify-center
+                    py-5 md:px-0 md:py-16 md:m-2 text-[18px] text-center">
+      <p className="break-normal">Thanks for reading this far!</p>
+      <p className="break-normal">Feel free to drop a message to say hello!</p>
+      <div className="flex flex-row justify-center items-center gap-5 mt-5">
+        <QuickAccessButton Icon={ResumeIcon} width={iconLength} onClick={() => window.open(ProfileData.resume)}/>
+        <QuickAccessButton Icon={GithubIcon} width={iconLength} onClick={() => window.open(ProfileData.links.github)}/>
+        <QuickAccessButton Icon={LinkedinIcon} width={iconLength} onClick={() => window.open(ProfileData.links.linkedin)}/>
+        <QuickAccessButton Icon={EmailIcon} width={iconLength} onClick={() => window.open(`mailto:${ProfileData.email}`)}/>
       </div>
     </div>
 

@@ -28,7 +28,7 @@ function App() {
     setScrollTop(event.currentTarget.scrollTop);
   };
 
-  const VerticalLine = () => <div className="h-[5%] w-0 border-l border-line gap-1"/>;
+  const VerticalLine = () => <div className="h-[5%] w-0 border-l border-line gap-1" />;
   const QuickAccessIcons: React.FC<{width: string}> = ({ width }) => <>
     <QuickAccessButton Icon={ResumeIcon} width={width} onClick={() => window.open(ProfileData.resume)}/>
     <QuickAccessButton Icon={GithubIcon} width={width} onClick={() => window.open(ProfileData.links.github)}/>
@@ -36,7 +36,7 @@ function App() {
     <QuickAccessButton Icon={EmailIcon} width={width} onClick={() => window.open(`mailto:${ProfileData.email}`)}/>
   </>;
 
-  const ContentPageCSS = "min-w-[100%] w-screen md:w-full h-fit min-h-full";
+  const ContentPageCSS = "min-w-[100%] w-screen md:w-full h-fit min-h-full py-5";
 
   const PageNavigationButton: React.FC<{text: string, page: number, href: string}> = ({ text, page, href }) => <a 
     href={href}
@@ -53,8 +53,8 @@ function App() {
   return (
     <div 
       className="h-screen w-screen max-w-screen
-                 md:grid md:grid-rows-1 md:grid-cols-[auto_auto_auto] md:snap-y md:snap-mandatory
-                 flex flex-col min-h-screen max-h-screen
+                 md:grid md:grid-rows-1 md:grid-cols-[auto_auto_auto] md:snap-y md:snap-mandatory md:snap-start
+                 flex flex-col min-h-screen max-h-screen 
                  overflow-y-auto scroll-smooth bg-background"
       onScroll={handleScroll}
     >
