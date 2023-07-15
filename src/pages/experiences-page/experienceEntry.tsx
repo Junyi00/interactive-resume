@@ -13,14 +13,14 @@ interface ExperienceEntryProps {
 const ExperienceEntry = (props: ExperienceEntryProps) => {
 
   const Header: React.FC = () => <div className="flex flex-col md:flex-row justify-start md:justify-between gap-2">
-    <p className="text-[20px] leading-[25px] md:text-[25px] md:leading-[30px]">{props.title}</p>
+    <p className="text-[22px] leading-[28px] md:text-[25px] md:leading-[30px] font-bold">{props.title}</p>
     <p className="text-[15px] text-[#ADADAD] font-bold">{props.period}</p>
   </div>;
 
   return (
     <div className={`${props.className} flex flex-row gap-2 w-full`}>
 
-      <div className="flex flex-col items-center mt-1">
+      <div className="hidden md:flex flex-col items-center mt-1">
         <div className="w-2 h-2 border border-[#438EFF]"/>
         <div className="w-0 flex-grow border-l border-[#438EFF]"/>
       </div>
