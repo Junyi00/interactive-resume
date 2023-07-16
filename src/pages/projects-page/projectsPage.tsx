@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 import PageHeader from "components/page-header/pageHeader";
 import ProjectEntry from "./projectEntry";
@@ -8,10 +8,11 @@ import ProjectsData from "data/projectsData";
 
 interface ProjectsPageProps {
   className: string;
+  isMobile: boolean;
   onHover: () => void;
 }
 
-const ProjectsPage = ({ className, onHover }: ProjectsPageProps) => {
+const ProjectsPage = ({ className, isMobile, onHover }: ProjectsPageProps) => {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
   const [openCardIndex, setOpenCardIndex] = useState<number>(0);
   
@@ -36,11 +37,11 @@ const ProjectsPage = ({ className, onHover }: ProjectsPageProps) => {
       }
     </div>
 
-    <ProjectEntryModal 
+    {!isMobile && <ProjectEntryModal 
       isOpen={isOpenModal} 
       onClose={() => { setIsOpenModal(false); }} 
       projectData={ ProjectsData[openCardIndex] } 
-    />
+    />}
   </div> 
 };
 

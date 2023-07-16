@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LandingPage from 'pages/landing-page/landingPage';
 import ExperiencesPage from 'pages/experiences-page/experiencesPage';
 import ProjectsPage from 'pages/projects-page/projectsPage';
@@ -23,6 +23,21 @@ const PAGE_IDS: { [key: number]: string } = {
 function App() {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [scrollTop, setScrollTop] = useState(0);
+
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [isMobile, setIsMobile] = useState<boolean>(true);
+  const MOBILE_WIDTH = 1024; // following tailwind large breakpoint
+
+  const updateDimensions = () => { setWindowWidth(window.innerWidth) }
+
+  useEffect(() => { 
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, [])
+
+  useEffect(() => setIsMobile(windowWidth < MOBILE_WIDTH), [windowWidth]);
 
   const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
     setScrollTop(event.currentTarget.scrollTop);
@@ -74,7 +89,7 @@ function App() {
       <div className="w-screen h-full lg:w-auto lg:h-screen lg:col-start-2">
         <LandingPage className={ContentPageCSS} scrollTop={scrollTop} onHover={onPageHover(0)}/>
         <ExperiencesPage className={ContentPageCSS} onHover={onPageHover(1)}/>
-        <ProjectsPage className={ContentPageCSS} onHover={onPageHover(2)}/>
+        <ProjectsPage className={ContentPageCSS} isMobile={isMobile} onHover={onPageHover(2)}/>
         <InfoPage className={ContentPageCSS} onHover={onPageHover(3)}/>
       </div>
       

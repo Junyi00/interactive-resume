@@ -37,7 +37,7 @@ const ProjectEntryModal = ({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
+          <div className="fixed inset-0 bg-black/30 z-20" aria-hidden="true" />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -48,7 +48,7 @@ const ProjectEntryModal = ({
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <div className="fixed inset-0 flex items-center justify-center p-4">
+          <div className="fixed inset-0 flex items-center justify-center p-4 z-20">
             <Dialog.Panel className="max-w-[80%] p-5 bg-background rounded-lg">
               {projectData &&
                 <div className="flex flex-row gap-5 h-fit bg-transparent">
