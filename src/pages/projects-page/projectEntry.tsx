@@ -42,7 +42,7 @@ const ProjectEntry = ({
     <div 
       id={id} 
       className={`${className} col-span-1 gap-1 h-fit rounded-lg flex flex-col bg-transparent cursor-pointer
-                  md:hover:[&>*:first-child]:drop-shadow-md md:hover:[&>*:first-child]:-translate-y-1 md:[&>h3]:hover:text-primary
+                  lg:hover:[&>*:first-child]:drop-shadow-md lg:hover:[&>*:first-child]:-translate-y-1 lg:[&>h3]:hover:text-primary
                   [&>*:first-child]:active:-translate-y-1 [&>h3]:active:text-primary`}
       onClick={handleOnClick}
       onKeyDown={handleOnClick}
@@ -54,13 +54,13 @@ const ProjectEntry = ({
       >
         <img className="" alt={name + "_image"} src={image} />
       </div>
-      <h3 className="md:hidden text-[18px] md:text-[20px] font-semibold tracking-wider text-text col-span-3 transition-all ease-in-out">
+      <h3 className="lg:hidden text-[18px] lg:text-[20px] font-semibold tracking-wider text-text col-span-3 transition-all ease-in-out">
         {expanded ? name.toUpperCase() : shortName.toUpperCase()}
       </h3>
-      <h3 className="hidden md:block text-[18px] md:text-[20px] font-semibold text-text col-span-3 transition-all ease-in-out">
+      <h3 className="hidden lg:block text-[18px] lg:text-[20px] font-semibold text-text col-span-3 transition-all ease-in-out">
         {shortName.toUpperCase()}
       </h3>
-      <div className={`md:hidden w-full flex flex-col gap-2 h-fit max-h-0 overflow-hidden transition-all duration-500 ${expanded ? "max-h-[10000px] overflow-visible ease-in" : "ease-out"}`}>
+      <div className={`lg:hidden w-full flex flex-col gap-2 h-fit max-h-0 overflow-hidden transition-all duration-500 ${expanded ? "max-h-[10000px] overflow-visible ease-in" : "ease-out"}`}>
         <div className="flex flex-col">
           <p className="text-[15px] font-bold text-subtext">{date}</p>
         </div>

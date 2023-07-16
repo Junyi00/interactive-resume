@@ -21,9 +21,9 @@ const ExperiencesPage = ({ className, onHover }: ExperiencesPageProps) => {
       className={`${className} bg-background text-text flex flex-col gap-2 justify-start items-start`}
       onMouseEnter={onHover}
     >
-      <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 md:px-10 w-full bg-background" text={"EXPERIENCES"} isMainHeader />
+      <PageHeader className="sticky lg:relative top-[38px] lg:top-0 px-5 lg:px-10 w-full bg-background" text={"EXPERIENCES"} isMainHeader />
 
-      <div className="w-full px-5 md:px-10 flex flex-col gap-3 justify-start items-start">
+      <div className="w-full px-5 lg:px-10 flex flex-col gap-3 justify-start items-start">
         {
           ExperiencesData.map((experience, index) => <ExperienceEntry key={index} {...experience} />)
         }

@@ -27,7 +27,7 @@ const ProjectEntryModal = ({
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog onClose={onClose} className="hidden md:block">
+      <Dialog onClose={onClose} className="hidden lg:block">
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -58,7 +58,7 @@ const ProjectEntryModal = ({
                   >
                     <img alt={name + "_image"} src={image} />
                   </div>
-                  <div className="w-2/3 md:col-span-2 flex flex-col gap-2">
+                  <div className="w-2/3 lg:col-span-2 flex flex-col gap-2">
                     <div className="flex flex-col">
                       <p className="text-[20px] font-bold tracking-wider text-text">{name.toUpperCase()}</p>
                       <p className="text-[15px] font-bold text-primary">{date}</p>

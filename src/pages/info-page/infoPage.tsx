@@ -30,16 +30,16 @@ const InfoPage = ({ className, onHover }: InfoPageProps) => {
     className={`${className} text-text w-full h-fit
                 flex flex-col gap-5 justify-between pt-10`}
   >
-    <div className="w-full flex flex-col gap-5 md:gap-10"> 
-      <div className="flex flex-col gap-1 w-full md:w-full">
-        <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 md:px-10 mb-2 w-full bg-background" text="SKILLSETS" isMainHeader />
-        <div className="w-full h-fit px-5 md:px-10"><SkillsetsBox skillsets={SkillsetsData} singleColumn={false}/></div>
+    <div className="w-full flex flex-col gap-5 lg:gap-10"> 
+      <div className="flex flex-col gap-1 w-full lg:w-full">
+        <PageHeader className="sticky lg:relative top-[38px] lg:top-0 px-5 lg:px-10 mb-2 w-full bg-background" text="SKILLSETS" isMainHeader />
+        <div className="w-full h-fit px-5 lg:px-10"><SkillsetsBox skillsets={SkillsetsData} singleColumn={false}/></div>
       </div>
 
       <div className="flex flex-row flex-wrap gap-5 justify-start">
         <div className="flex flex-col gap-5">
-          <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 md:px-10 w-full bg-background" text="EDUCATION" />
-          <div className="px-5 md:px-10">
+          <PageHeader className="sticky lg:relative top-[38px] lg:top-0 px-5 lg:px-10 w-full bg-background" text="EDUCATION" />
+          <div className="px-5 lg:px-10">
             <p className="text-[25px] leading-[30px] text-primary font-semibold">National University of Singapore</p>
             <p className="text-[15px] text-subtext font-bold">August 2021 - Current</p>
             <StyledList>
@@ -54,8 +54,8 @@ const InfoPage = ({ className, onHover }: InfoPageProps) => {
         </div>
 
         <div className="flex flex-col">
-          <PageHeader className="sticky md:relative top-[38px] md:top-0 px-5 md:px-10 mb-2 w-full bg-background" text="ACHIEVEMENTS" />
-          <div className="px-5 md:px-10">
+          <PageHeader className="sticky lg:relative top-[38px] lg:top-0 px-5 lg:px-10 mb-2 w-full bg-background" text="ACHIEVEMENTS" />
+          <div className="px-5 lg:px-10">
             <StyledList>
               <li>Goh Chok Tong’s Young Student Leader Award (2018)</li>
               <li>NSF of the Year 2021</li>
@@ -68,9 +68,9 @@ const InfoPage = ({ className, onHover }: InfoPageProps) => {
       </div>
     </div>
 
-    <div className="h-fit bg-background-card md:bg-transparent md:border-t md:border-line
+    <div className="h-fit bg-background-card lg:bg-transparent lg:border-t lg:border-line
                     flex flex-col items-center justify-center
-                    py-5 md:px-0 md:py-16 md:mt-10 text-[18px] text-center">
+                    py-5 lg:px-0 lg:py-16 lg:mt-10 text-[18px] text-center">
       <p className="break-normal">Thanks for reading this far!</p>
       <p className="break-normal">Feel free to drop a message to say hello!</p>
       <div className="flex flex-row justify-center items-center gap-5 mt-5">

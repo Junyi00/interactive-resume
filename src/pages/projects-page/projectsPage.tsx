@@ -26,9 +26,9 @@ const ProjectsPage = ({ className, onHover }: ProjectsPageProps) => {
                 flex flex-col gap-2 justify-start items-stretch pt-10 pb-2`} 
     onMouseEnter={onHover}
   >
-    <PageHeader className="sticky md:relative top-[38px] md:top-0  bg-background px-5 md:px-10 w-full md:w-fit" text="PROJECTS" isMainHeader />
+    <PageHeader className="sticky lg:relative top-[38px] lg:top-0 bg-background px-5 lg:px-10 w-full lg:w-fit" text="PROJECTS" isMainHeader />
     
-    <div className="px-5 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
+    <div className="px-5 lg:px-10 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10">
       {
         ProjectsData.map((project, index) => (
           <ProjectEntry 

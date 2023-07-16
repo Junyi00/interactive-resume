@@ -36,7 +36,7 @@ function App() {
     <QuickAccessButton Icon={EmailIcon} width={width} onClick={() => window.open(`mailto:${ProfileData.email}`)}/>
   </>;
 
-  const ContentPageCSS = "min-w-[100%] w-screen md:w-full h-fit min-h-full py-5 last:pb-0";
+  const ContentPageCSS = "min-w-[100%] w-screen lg:w-full h-fit min-h-full py-5 last:pb-0";
 
   const PageNavigationButton: React.FC<{text: string, page: number, href: string}> = ({ text, page, href }) => <a 
     href={href}
@@ -53,32 +53,32 @@ function App() {
   return (
     <div 
       className="h-screen w-screen max-w-screen
-                 md:grid md:grid-rows-1 md:grid-cols-[auto_auto_auto] md:snap-y md:snap-mandatory md:snap-start
+                 lg:grid lg:grid-rows-1 lg:grid-cols-[auto_auto_auto] lg:snap-y lg:snap-mandatory lg:snap-start
                  flex flex-col min-h-screen max-h-screen 
                  overflow-y-auto scroll-smooth bg-background"
       onScroll={handleScroll}
     >
 
-      <div className="hidden md:flex col-start-1 sticky top-0 h-screen w-fit
+      <div className="hidden lg:flex col-start-1 sticky top-0 h-screen w-fit
                       flex-col gap-5 justify-start items-center pl-5">
         <VerticalLine />
         <QuickAccessIcons width="30px"/>
       </div> 
-      <div className="md:hidden sticky top-0 z-10 w-full h-[40px] flex flex-row justify-between items-center pt-2 pb-1 px-5 bg-background">
+      <div className="lg:hidden sticky top-0 z-10 w-full h-[40px] flex flex-row justify-between items-center pt-2 pb-1 px-5 bg-background">
         <a href="#landing" className="text-text text-[20px] tracking-wider">GJY</a>
         <div className="flex flex-row gap-3">
           <QuickAccessIcons width="20px"/>
         </div>
       </div>
 
-      <div className="w-screen h-full md:w-auto md:h-screen md:col-start-2">
+      <div className="w-screen h-full lg:w-auto lg:h-screen lg:col-start-2">
         <LandingPage className={ContentPageCSS} scrollTop={scrollTop} onHover={onPageHover(0)}/>
         <ExperiencesPage className={ContentPageCSS} onHover={onPageHover(1)}/>
         <ProjectsPage className={ContentPageCSS} onHover={onPageHover(2)}/>
         <InfoPage className={ContentPageCSS} onHover={onPageHover(3)}/>
       </div>
       
-      <div className="hidden md:flex col-start-3 sticky top-0 h-screen w-fit flex-col gap-2 justify-end items-end pr-5 text-icon">
+      <div className="hidden lg:flex col-start-3 sticky top-0 h-screen w-fit flex-col gap-2 justify-end items-end pr-5 text-icon">
         <PageNavigationButton href={`#${PAGE_IDS[0]}`} page={0} text="Welcome"/>
         <PageNavigationButton href={`#${PAGE_IDS[1]}`} page={1} text="Experiences"/>
         <PageNavigationButton href={`#${PAGE_IDS[2]}`} page={2} text="Projects"/>
@@ -86,7 +86,7 @@ function App() {
         <VerticalLine />
       </div> 
 
-      <BackgroundImage className="md:hidden w-full fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-10 pointer-events-none" />
+      <BackgroundImage className="lg:hidden w-full fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-10 pointer-events-none" />
     </div>
   );
     

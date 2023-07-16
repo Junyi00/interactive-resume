@@ -14,13 +14,13 @@ const LandingPage = ({ className, scrollTop, onHover }: LandingPageProps) => {
 
   return <div 
     id="landing"
-    className={`${className} bg-background text-text p-5 grid grid-cols-1 md:grid-cols-2 gap-2 items-center justify-center`}
+    className={`${className} bg-background text-text p-5 grid grid-cols-1 lg:grid-cols-2 gap-2 items-center justify-center`}
     onMouseEnter={onHover}
   >
-    <div className="flex flex-col items-start md:items-end gap-4">
-      <div className="flex flex-col items-start md:items-end w-fit">
-        <span className="text-left md:text-right text-subtext text-[35px] leading-[45px]">Hello there! I am</span>
-        <h1 className="text-left md:text-right font-bold text-text text-[55px] leading-[65px] hover:text-primary transition-all duration-200 ease-in-out">
+    <div className="w-fit mx-auto flex flex-col items-start lg:items-end gap-4">
+      <div className="flex flex-col items-start lg:items-end w-fit">
+        <span className="text-left lg:text-right text-subtext text-[35px] leading-[45px]">Hello there! I am</span>
+        <h1 className="text-left lg:text-right font-bold text-text text-[55px] leading-[65px] hover:text-primary transition-all duration-200 ease-in-out">
           <TypeAnimation
             sequence={[
               'Goh Jun Yi',
@@ -35,12 +35,12 @@ const LandingPage = ({ className, scrollTop, onHover }: LandingPageProps) => {
         </h1>
       </div>
 
-      <p className="w-full text-left md:w-5/6 md:text-right text-subtext">
+      <p className="w-full text-left lg:w-5/6 lg:text-right text-subtext">
         I am currently a <HighlightText>penultimate</HighlightText> computer science student in <HighlightText>National University of Singapore</HighlightText>.
       </p>
     </div>
 
-    <BackgroundImage translateY={scrollTop} className="max-w-[500px] hidden md:block" />
+    <BackgroundImage translateY={scrollTop} className="max-w-[500px] hidden lg:block" />
   </div>;
 };
 
