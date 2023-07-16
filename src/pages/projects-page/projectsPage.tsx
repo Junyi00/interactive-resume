@@ -13,13 +13,8 @@ interface ProjectsPageProps {
 
 const ProjectsPage = ({ className, onHover }: ProjectsPageProps) => {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
-  const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    if (openCardIndex === null) return;
-    setIsOpenModal(true);
-  }, [openCardIndex])
-
+  const [openCardIndex, setOpenCardIndex] = useState<number>(0);
+  
   return <div 
     id="projects" 
     className={`${className} bg-background text-text
@@ -34,7 +29,7 @@ const ProjectsPage = ({ className, onHover }: ProjectsPageProps) => {
           <ProjectEntry 
             id={`project_${index}`} 
             key={index}
-            onClick={() => { setOpenCardIndex(index); }}
+            onClick={() => { setOpenCardIndex(index); setIsOpenModal(true); }}
             projectData={project} 
           />
         ))
@@ -43,8 +38,8 @@ const ProjectsPage = ({ className, onHover }: ProjectsPageProps) => {
 
     <ProjectEntryModal 
       isOpen={isOpenModal} 
-      onClose={() => { setIsOpenModal(false); setOpenCardIndex(null); }} 
-      projectData={ openCardIndex !== null ? ProjectsData[openCardIndex] : null } 
+      onClose={() => { setIsOpenModal(false); }} 
+      projectData={ ProjectsData[openCardIndex] } 
     />
   </div> 
 };

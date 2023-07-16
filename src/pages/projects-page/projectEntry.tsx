@@ -49,10 +49,10 @@ const ProjectEntry = ({
     >
       <div 
         style={{ backgroundColor: bgColor }} 
-        className="col-span-1 h-[200px] flex gap-10 items-center justify-center rounded transition-all ease-in-out 
+        className="col-span-1 h-[200px] flex gap-10 items-center justify-center rounded-lg transition-all ease-in-out 
                    object-cover overflow-hidden shadow-sm shadow-gray-300"
       >
-        <img className="" alt={name + "_image"} src={image} />
+        <img alt={name + "_image"} src={image} />
       </div>
       <h3 className="lg:hidden text-[18px] lg:text-[20px] font-semibold tracking-wider text-text col-span-3 transition-all ease-in-out">
         {expanded ? name.toUpperCase() : shortName.toUpperCase()}
