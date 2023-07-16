@@ -54,7 +54,7 @@ const ProjectEntryModal = ({
                 <div className="flex flex-row gap-5 h-fit bg-transparent">
                   <div 
                     style={{ backgroundColor: bgColor }} 
-                    className="w-1/3 max-h-[400px] p-2 gap-10 flex items-center justify-center rounded-lg object-cover overflow-hidden"
+                    className="w-1/3 max-h-[400px] gap-10 flex items-center justify-center rounded-lg object-cover overflow-hidden"
                   >
                     <img alt={name + "_image"} src={image} />
                   </div>
