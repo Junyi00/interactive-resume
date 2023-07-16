@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import PageHeader from "components/page-header/pageHeader";
 import ProjectEntry from "./projectEntry";
@@ -13,7 +13,12 @@ interface ProjectsPageProps {
 
 const ProjectsPage = ({ className, onHover }: ProjectsPageProps) => {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
-  const [openCardIndex, setOpenCardIndex] = useState<number>(0);
+  const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (openCardIndex === null) return;
+    setIsOpenModal(true);
+  }, [openCardIndex])
 
   return <div 
     id="projects" 
@@ -28,9 +33,8 @@ const ProjectsPage = ({ className, onHover }: ProjectsPageProps) => {
         ProjectsData.map((project, index) => (
           <ProjectEntry 
             id={`project_${index}`} 
-            key={index} 
-            isOpen={openCardIndex === index} 
-            onClick={() => { setOpenCardIndex(index); setIsOpenModal(true); }}
+            key={index}
+            onClick={() => { setOpenCardIndex(index); }}
             projectData={project} 
           />
         ))
@@ -39,8 +43,8 @@ const ProjectsPage = ({ className, onHover }: ProjectsPageProps) => {
 
     <ProjectEntryModal 
       isOpen={isOpenModal} 
-      onClose={() => { setIsOpenModal(false); }} 
-      projectData={ProjectsData[openCardIndex]} 
+      onClose={() => { setIsOpenModal(false); setOpenCardIndex(null); }} 
+      projectData={ openCardIndex !== null ? ProjectsData[openCardIndex] : null } 
     />
   </div> 
 };

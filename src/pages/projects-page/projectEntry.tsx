@@ -11,7 +11,6 @@ interface ProjectEntryProps {
   className?: string;
   id?: string;
   projectData: ProjectType;
-  isOpen?: boolean;
   onClick: () => void;
 }
 
@@ -19,7 +18,6 @@ const ProjectEntry = ({
   className="", 
   id, 
   projectData,
-  isOpen=false,
   onClick
 }: ProjectEntryProps) => {
   const {
@@ -33,11 +31,7 @@ const ProjectEntry = ({
     links
   } = projectData
 
-  const [expanded, setExpanded] = useState<boolean>(isOpen);
-
-  useEffect(() => {
-    setExpanded(isOpen);
-  }, [isOpen])
+  const [expanded, setExpanded] = useState<boolean>(false);
 
   const handleOnClick = () => {
     onClick(); 
@@ -47,8 +41,9 @@ const ProjectEntry = ({
   return (
     <div 
       id={id} 
-      className={`${className} col-span-1 gap-1 h-fit rounded-lg flex flex-col bg-transparent 
-                  md:hover:[&>*:first-child]:drop-shadow-md md:hover:[&>*:first-child]:-translate-y-1 md:[&>h3]:hover:text-primary cursor-pointer`}
+      className={`${className} col-span-1 gap-1 h-fit rounded-lg flex flex-col bg-transparent cursor-pointer
+                  md:hover:[&>*:first-child]:drop-shadow-md md:hover:[&>*:first-child]:-translate-y-1 md:[&>h3]:hover:text-primary
+                  [&>*:first-child]:active:-translate-y-1 [&>h3]:active:text-primary`}
       onClick={handleOnClick}
       onKeyDown={handleOnClick}
     >
