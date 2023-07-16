@@ -35,7 +35,7 @@ const LandingPage = ({ className, scrollTop, onHover }: LandingPageProps) => {
         </h1>
       </div>
 
-      <p className="w-full text-left md:w-2/3 md:text-right text-subtext">
+      <p className="w-full text-left md:w-5/6 md:text-right text-subtext">
         I am currently a <HighlightText>penultimate</HighlightText> computer science student in <HighlightText>National University of Singapore</HighlightText>.
       </p>
     </div>

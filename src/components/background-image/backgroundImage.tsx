@@ -24,7 +24,7 @@ const BackgroundImage = ({ className, translateY }: BackgroundImageProps) => {
         <img 
           alt=""
           src={BackgroundTop} 
-          className={`row-start-1 col-start-1 z-20 transition-transform duration-[1500ms] ease-in-out 
+          className={`row-start-1 col-start-1 z-20 transition-transform duration-[2000ms] ease-in-out 
                       ${ translateY && translateY > FLY_UP_THRESHOLD ? "translate-y-[-100vw]" : "" }
                       ${ inAnimate && "translate-y-[-100vw]" }`}
         />
