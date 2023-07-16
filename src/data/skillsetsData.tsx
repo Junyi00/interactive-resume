@@ -16,7 +16,7 @@ const SkillsetsData: Skillsets = {
   },
   Others: {
     experienced: [LogoType.Git, LogoType.Docker, LogoType.Selenium, LogoType.TensorFlow, LogoType.PyTorch],
-    familiar: [LogoType.Nginx]
+    familiar: [LogoType.Nginx, LogoType.GoogleAnalytics]
   }
 };
 

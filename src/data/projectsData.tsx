@@ -24,6 +24,7 @@ const ProjectsData: ProjectType[] = [
     name: "Source Academy",
     date: "January 2023 - May 2023",
     description: [
+      "Source Academy is an immersive experiential environment for learning programming, developed in the School of Computing at the National University of Singapore.",
       "Designed and implemented a notification system while ensuring that extendibility across various notification mediums", 
       "Revamped background job processing for fault-tolerant execution, job tracking and monitoring",
     ],
@@ -40,7 +41,7 @@ const ProjectsData: ProjectType[] = [
     ],
     image: EcoQuestImage,
     bgColor: "#FFFFFF",
-    techStack: [LogoType.TypeScript, LogoType.Python, LogoType.React, LogoType.Redux, LogoType.PostgreSQL, LogoType.PyTorch],
+    techStack: [LogoType.TypeScript, LogoType.Python, LogoType.React, LogoType.Redux, LogoType.PostgreSQL, LogoType.PyTorch, LogoType.GoogleAnalytics],
   },
   {
     name: "Recyclops",
@@ -58,6 +59,7 @@ const ProjectsData: ProjectType[] = [
     name: "footprint",
     date: "December 2021",
     description: [
+      "Awarded Best Freshman Hack of NUS Hack&Roll 2022",
       "A web application to visualise the proportion of the Earth we have visited, our 'footprint' on the world.",
       "This shows you how much of the world you already covered by extracting all those 'footprints' you have clocked in your favourite exercise applications. (e.g NRC, Strava)",
       "Gives you the power to record where you have walked and explored on a day to basis. Colour the map with your 'footprints' as you explore the unknown.",

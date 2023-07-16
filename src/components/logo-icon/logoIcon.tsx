@@ -33,6 +33,7 @@ import ElixirIcon from "assets/icons/elixir-lang-icon.png";
 import {ReactComponent as EctoIcon} from "assets/icons/ecto.svg";
 import {ReactComponent as ElasticsearchIcon} from "assets/icons/elasticsearch.svg";
 import {ReactComponent as SeleniumIcon} from "assets/icons/selenium.svg";
+import {ReactComponent as GoogleAnalyticsIcon} from "assets/icons/google_analytics.svg";
 
 export enum LogoType {
   React = "React",
@@ -70,6 +71,7 @@ export enum LogoType {
   Ecto = "Ecto",
   Elasticsearch = "Elasticsearch",
   Selenium = "Selenium",
+  GoogleAnalytics = "Google Analytics",
 }
 
 const LogoSVG = {
@@ -108,6 +110,7 @@ const LogoSVG = {
   Ecto: EctoIcon,
   Elasticsearch: ElasticsearchIcon,
   Selenium: SeleniumIcon,
+  "Google Analytics": GoogleAnalyticsIcon,
 }
 
 const LogoLink = {
@@ -146,6 +149,7 @@ const LogoLink = {
   Ecto: "https://hexdocs.pm/ecto/Ecto.html",
   Elasticsearch: "https://www.elastic.co/",
   Selenium: "https://www.selenium.dev/",
+  "Google Analytics": "https://analytics.google.com/analytics/",
 }
 
 interface LogoIconProps {
@@ -161,7 +165,7 @@ const LogoIcon = ({ name, length, link }: LogoIconProps) => {
   const Icon = LogoSVG[name];
   return <div className="flex flex-col items-center cursor-pointer [&>svg]:hover:drop-shadow-md [&>*]:hover:ease-in-out [&>*]:hover:transition [&>p]:hover:visible w-[32px]" onClick={onLogoClick}>
     <Icon width={length || DEFAULT_LENGTH} height={length || DEFAULT_LENGTH} />
-    <p className="text-[10px] invisible">{name}</p>
+    <p className="text-[10px] text-center invisible">{name}</p>
   </div>
 };
 
