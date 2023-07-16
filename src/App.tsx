@@ -53,7 +53,7 @@ function App() {
   return (
     <div 
       className="h-screen w-screen max-w-screen
-                 lg:grid lg:grid-rows-1 lg:grid-cols-[auto_auto_auto] lg:snap-y lg:snap-mandatory lg:snap-start
+                 lg:grid lg:grid-rows-1 lg:grid-cols-[auto_auto_auto]
                  flex flex-col min-h-screen max-h-screen 
                  overflow-y-auto scroll-smooth bg-background"
       onScroll={handleScroll}
