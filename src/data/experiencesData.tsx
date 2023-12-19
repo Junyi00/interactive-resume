@@ -3,12 +3,13 @@ import { LogoType } from "components/logo-icon/logoIcon";
 const ExperiencesData = [
   {
     title: "NodeFlair",
-    period: "May 2023 - Current",
+    period: "May 2023 - Dec 2023",
     location: "Singapore",
     role: "Software Engineer Intern",
     description: [
-      "Built newsletter feature to provide personalized content based on user’s preferences", 
-      "Refactored frontend features to improve search engine optimizations and reduce bounce rate",
+      "Developed an AI-powered resume builder with personalized recommendations, real-time feedbacks, and PDF export capabilities",
+      "Engineered newsletter feature that recommends weekly job opportunities and other data based on users’ job search status and preferences, now utilized by over 1000 users", 
+      "Revamped frontend features which reduced bounce rate by 10% and exit rate by 20%",
     ],
     techStack: [LogoType.TypeScript, LogoType.React, LogoType.Rails, LogoType.PostgreSQL, LogoType.Elasticsearch, LogoType.Selenium],
   },
@@ -18,9 +19,9 @@ const ExperiencesData = [
     location: "Singapore",
     role: "Software Engineer Intern",
     description: [
-      "Led a team of 3 on the implementation of 2 factor authentication (SingPass, Email) to enhance access control for 2 organisations", 
-      "Deployed staging environments with Capistrano, Nginx and GitLab’s CI/CD",
+      "Led a team of 3 to design and implement 2-factor authentication (SingPass, Email, TOTP) for an elderly management system, currently being deployed for 2,500 staff and over 20,000 seniors", 
       "Spearheaded the upgrade of Ruby on Rails backend from 5.2.0 to 6.1.6, removing unsupported gems and upgrading dependencies",
+      "Deployed staging environments with Capistrano, Nginx and GitLab’s CI/CD",
       "Maintained relational databases on PostgreSQL and backend APIs for a decade old Ruby on Rails application",
     ],
     techStack: [LogoType.Ruby, LogoType.JavaScript, LogoType.Ionic, LogoType.Rails, LogoType.PostgreSQL, LogoType.Nginx],
