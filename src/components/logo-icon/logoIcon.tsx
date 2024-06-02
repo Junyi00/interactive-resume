@@ -34,6 +34,10 @@ import {ReactComponent as EctoIcon} from "assets/icons/ecto.svg";
 import {ReactComponent as ElasticsearchIcon} from "assets/icons/elasticsearch.svg";
 import {ReactComponent as SeleniumIcon} from "assets/icons/selenium.svg";
 import {ReactComponent as GoogleAnalyticsIcon} from "assets/icons/google_analytics.svg";
+import {ReactComponent as SwiftIcon} from "assets/icons/swift.svg";
+import {ReactComponent as SpringBootIcon} from "assets/icons/spring-boot.svg";
+import {ReactComponent as KafkaIcon} from "assets/icons/kafka.svg";
+import {ReactComponent as DB2Icon} from "assets/icons/db2.svg";
 
 export enum LogoType {
   React = "React",
@@ -72,6 +76,10 @@ export enum LogoType {
   Elasticsearch = "Elasticsearch",
   Selenium = "Selenium",
   GoogleAnalytics = "Google Analytics",
+  Swift = "Swift",
+  SpringBoot = "SpringBoot",
+  Kafka = "Kafka",
+  DB2 = "DB2",
 }
 
 const LogoSVG = {
@@ -111,6 +119,10 @@ const LogoSVG = {
   Elasticsearch: ElasticsearchIcon,
   Selenium: SeleniumIcon,
   "Google Analytics": GoogleAnalyticsIcon,
+  Swift: SwiftIcon,
+  SpringBoot: SpringBootIcon,
+  Kafka: KafkaIcon,
+  DB2: DB2Icon,
 }
 
 const LogoLink = {
@@ -150,6 +162,10 @@ const LogoLink = {
   Elasticsearch: "https://www.elastic.co/",
   Selenium: "https://www.selenium.dev/",
   "Google Analytics": "https://analytics.google.com/analytics/",
+  Swift: "https://www.swift.org/",
+  SpringBoot: "https://spring.io/projects/spring-boot",
+  Kafka: "https://kafka.apache.org/",
+  DB2: "https://www.ibm.com/products/db2",
 }
 
 interface LogoIconProps {

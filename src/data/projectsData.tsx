@@ -6,15 +6,28 @@ import FootprintImage from "assets/projects/footprint/footprint.jpg";
 import EcoQuestImage from "assets/projects/ecoquest/ecoquest.png";
 import SourceAcademyImage from "assets/projects/source-academy/source_academy.jpg";
 import SightWordsImage from "assets/projects/sight-words/sight_words.png";
+import StarDashImage from "assets/projects/star-dash/star_dash.png";
 
 const ProjectsData: ProjectType[] = [
+  {
+    name: "Star Dash",
+    shortName: "Star Dash",
+    date: "March 2024 - May 2024",
+    description: [
+      "A competitive platformer for family and friends.",
+      "Developed in Swift, following an Entity Component System (ECS) architecture"
+    ],
+    image: StarDashImage,
+    bgColor: "ddf3fe",
+    techStack: [LogoType.Swift],
+  },
   {
     name: "Sight Words - Google Developer Student Club",
     shortName: "Sight Words",
     date: "August 2022 - Current",
     description: [
-      "Creating an online learning platform for Dyslexic Association of Singapore that is engaging and customised to dyslexic students’ learning needs by using a multisensory approach", 
-      "Developing a progressive web application using React, NestJS and Recoil",
+      "Created an online learning platform for Dyslexic Association of Singapore that is engaging and customised to dyslexic students’ learning needs by using a multisensory approach", 
+      "Developed a progressive web application using React, NestJS and Recoil",
     ],
     image: SightWordsImage,
     bgColor: "#333333",

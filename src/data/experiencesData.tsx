@@ -2,6 +2,16 @@ import { LogoType } from "components/logo-icon/logoIcon";
 
 const ExperiencesData = [
   {
+    title: "Morgan Stanley",
+    period: "May 2024 - Current",
+    location: "Singapore",
+    role: "Software Engineer Intern",
+    description: [
+      "Design and develop a high-frequency data system to generate performance metrics and identify operational issues",
+    ],
+    techStack: [LogoType.TypeScript, LogoType.React, LogoType.Kafka, LogoType.Java, LogoType.SpringBoot, LogoType.DB2],
+  },
+  {
     title: "NodeFlair",
     period: "May 2023 - Dec 2023",
     location: "Singapore",

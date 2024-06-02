@@ -49,6 +49,15 @@ const InfoPage = ({ className, onHover }: InfoPageProps) => {
             <StyledList>
               <li>Teaching Assistant for CS1101S (AY2223 Sem 1)</li>
               <li>Teaching Assistant for CS2100 (AY2223 Sem 2)</li>
+              <li>Teaching Assistant for CS2040S (AY2324 Sem 2)</li>
+            </StyledList>
+          </div>
+          <div className="px-5 lg:px-10">
+            <p className="text-[25px] leading-[30px] text-primary font-semibold">University of Waterloo</p>
+            <p className="text-[15px] text-subtext font-bold">Fall 2023</p>
+            <StyledList>
+              <li>Student Exchange Programme (SEP) - Fall 2023</li>
+              <li>Recipient of Canada-ASEAN Scholarship 2023</li>
             </StyledList>
           </div>
         </div>
